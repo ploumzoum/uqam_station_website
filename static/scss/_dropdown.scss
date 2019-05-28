@@ -10,5 +10,10 @@
 
 .dropdown-menu {
   background-color: $dropdown-background-color;
-
+  border-radius: 0;
+  .dropdown-item {
+    color: $dropdown-color;
+    font-weight: 500;
+  }
+  border: 0;
 }
