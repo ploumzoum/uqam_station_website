@@ -1,3 +1,8 @@
-// Chargement de tout se css de bootstrap
+@import "variables";
+// Importation de tout les styles de bootstrap
 @import "../bootstrap/scss/bootstrap";
+
+// Importation des modifications du style
+@import "navbar";
+@import "dropdown";
 

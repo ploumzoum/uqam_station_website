@@ -2,30 +2,91 @@
 {% load static %}
 {% load sass_tags %}
 
-<html lang="fr" xml:lang="fr" >
+<html lang="fr" xml:lang="fr">
 
 <header>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
-    {% block header %}
-    {% endblock %}
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
+	{% block header %}
+	{% endblock %}
 </header>
 <body>
-<main class="mt-auto mb-auto">
-    {% block content %}
-    {% endblock %}
+<nav class="navbar navbar-dark navbar-expand-lg">
+	<div class="container">
+		<a class="navbar-brand" href="#">STATION ESCER UQÀM</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="nav-links">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item ">
+					<a class="nav-link" href="#">Accueil</a>
+				</li>
+				<li class="nav-item dropdown">
+					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Visualisation</div>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Météogramme</a></li>
+						<li><a class="dropdown-item" href="#">Évolution historique</a></li>
+						<li><a class="dropdown-item" href="#">Graphique radial</a></li>
+						<li><a class="dropdown-item" href="#">Rose des vents</a></li>
+						<li><a class="dropdown-item" href="#">Disdromètre</a></li>
+						<li><a class="dropdown-item" href="#">Radar</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Instrumentation</div>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Anémomètre à coupelles</a></li>
+						<li><a class="dropdown-item" href="#">Girouette</a></li>
+						<li><a class="dropdown-item" href="#">Anémomètre ultrasonique</a></li>
+						<li><a class="dropdown-item" href="#">Pluviomètre</a></li>
+						<li><a class="dropdown-item" href="#">Disdromètre</a></li>
+						<li><a class="dropdown-item" href="#">Radiomètres</a></li>
+						<li><a class="dropdown-item" href="#">Température - Humidité</a></li>
+						<li><a class="dropdown-item" href="#">Datalogger</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Données</div>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Metar</a></li>
+						<li><a class="dropdown-item" href="#">Sounding</a></li>
+						<li><a class="dropdown-item" href="#">Données</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<div class="nav-link dropdown-toggle" data-toggle="dropdown">À propos</div>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#" disabled>Historique</a></li>
+						<li><a class="dropdown-item" href="#" disabled>Équipe</a></li>
+					</ul>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<main class="container">
+	{% block content %}
+	{% endblock %}
 </main>
 <footer>
-   <div class="wrapper">
-       <h1>STATION ESCER UQÀM<span class="orange">.</span></h1>
-       <div class="copyright"> Copyright @ {% now "Y" %}. </div>
-   </div>
-   
-    </footer>
+	<div class="wrapper">
+		<h1>STATION ESCER UQÀM<span class="orange">.</span></h1>
+		<div class="copyright"> Copyright @ {% now "Y" %}.</div>
+	</div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+				crossorigin="anonymous"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
 </body>
 
 </html>
