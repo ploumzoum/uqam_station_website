@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+{% load sass_tags %}
+
+<html lang="fr" xml:lang="fr" >
+
+<header>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
+    {% block header %}
+    {% endblock %}
+</header>
+<body>
+<main class="mt-auto mb-auto">
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+   <div class="wrapper">
+       <h1>STATION ESCER UQÀM<span class="orange">.</span></h1>
+       <div class="copyright"> Copyright @ {% now "Y" %}. </div>
+   </div>
+   
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+</body>
+
+</html>

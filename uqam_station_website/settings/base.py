@@ -2,6 +2,7 @@ import os
 from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 ROOT_DIR = os.path.dirname(BASE_DIR)
 
 SECRET_KEY = config('SECRET_KEY')
@@ -14,6 +15,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
+
+    # Pages du site
+    'home.apps.HomeConfig'
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'
@@ -98,8 +102,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
 
-SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [
+    os.path.join(ROOT_DIR, "static")
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(ROOT_DIR, 'static'),
+]
