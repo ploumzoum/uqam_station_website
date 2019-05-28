@@ -1,0 +1,8 @@
+Django==2.2
+django-appconf==1.0.3
+django-compressor==2.2
+django-sass-processor==0.7.3
+python-decouple==3.1
+libsass==0.18.0
+django-bootstrap4==0.0.8
+gunicorn
