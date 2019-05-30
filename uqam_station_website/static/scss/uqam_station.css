@@ -7045,4 +7045,14 @@ nav {
 body {
   font-family: 'Open Sans', sans-serif; }
 
+footer {
+  background-color: #176087;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  footer > .copyright {
+    align-self: center; }
+
 /*# sourceMappingURL=uqam_station.css.map */

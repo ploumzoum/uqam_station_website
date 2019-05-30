@@ -1,4 +1,19 @@
 {% extends 'base.html' %}
+{% block header %}
+  <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+  <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css"/>
+  <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css"/>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
+
+  <title>Accueil - Station UQÀM</title>
+{% endblock %}
 {% block content %}
-    hello world
+  hello world
+{% endblock %}
+{% block scripts %}
+  <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+  <script type='text/javascript'
+          src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
 {% endblock %}

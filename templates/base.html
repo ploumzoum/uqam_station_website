@@ -73,12 +73,9 @@
 	{% block content %}
 	{% endblock %}
 </main>
-<footer>
-	<div class="wrapper">
-		<h1>STATION ESCER UQÀM<span class="orange">.</span></h1>
+<footer class="fixed-bottom">
+		<h3>STATION ESCER UQÀM</h3>
 		<div class="copyright"> Copyright @ {% now "Y" %}.</div>
-	</div>
-
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -88,6 +85,8 @@
 				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 				crossorigin="anonymous"></script>
 <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+{% block scripts %}
+{% endblock %}
 </body>
 
 </html>
