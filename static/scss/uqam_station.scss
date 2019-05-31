@@ -4,9 +4,12 @@
 // Importation de tout les styles de bootstrap
 @import "../bootstrap/scss/bootstrap";
 
-// Importation des modifications du style
+// Importation du style de parties de page
 @import "navbar";
 @import "dropdown";
 @import "global";
 @import "footer";
+
+// Importation du style des pages
+@import "home.page";
 

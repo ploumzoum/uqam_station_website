@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
+    'leaflet',
 
     # Pages du site
     'home.apps.HomeConfig'
@@ -116,3 +117,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(ROOT_DIR, 'static'),
 ]
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (45.508582, -73.568797),
+    'DEFAULT_ZOOM': 16,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+}

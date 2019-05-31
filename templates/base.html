@@ -4,13 +4,14 @@
 
 <html lang="fr" xml:lang="fr">
 
-<header>
+<head>
+  <title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
-	{% block header %}
+	{% block head %}
 	{% endblock %}
-</header>
+</head>
 <body>
 <nav class="navbar navbar-dark navbar-expand-lg">
 	<div class="container">
@@ -73,7 +74,7 @@
 	{% block content %}
 	{% endblock %}
 </main>
-<footer class="fixed-bottom">
+<footer>
 		<h3>STATION ESCER UQÀM</h3>
 		<div class="copyright"> Copyright @ {% now "Y" %}.</div>
 </footer>

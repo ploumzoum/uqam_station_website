@@ -1,19 +1,78 @@
 {% extends 'base.html' %}
-{% block header %}
-  <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
-  <link rel="stylesheet" type="text/css"
-        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css"/>
-  <link rel="stylesheet" type="text/css"
-        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css"/>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
+{% load static %}
 
+{% load leaflet_tags %}
+{% block head %}
+  {% leaflet_css %}
   <title>Accueil - Station UQÀM</title>
 {% endblock %}
 {% block content %}
-  hello world
+    <h1 class="display-4 mb-5">Station météorologique de l'UQÀM</h1>
+
+  {% leaflet_map "map" callback="window.map_init_basic" %}
+
+  <h1 class="display-4 mt-4">Données instantanées</h1>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Température:</p></div>
+    <div class="col-sm-4">14.2°C</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Température ressentie:</p></div>
+    <div class="col-sm-4">14.2°C</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Date:</p></div>
+    <div class="col-sm-4">31/5/2019 - 14h 35min</div>
+  </div>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Élévation:</p></div>
+    <div class="col-sm-4">80 m</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Pression:</p></div>
+    <div class="col-sm-4">1054.0 hPa</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Pression au niveau de la mer:</p></div>
+    <div class="col-sm-4">1054.0 hPa</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Température du point de rosée:</p></div>
+    <div class="col-sm-4">14.2°C</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Refroidissement éolien:</p></div>
+    <div class="col-sm-4">14.2°C</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Humidité:</p></div>
+    <div class="col-sm-4">39.0 %</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Direction du vent:</p></div>
+    <div class="col-sm-4">284.0 °</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Module du vent:</p></div>
+    <div class="col-sm-4">10.0 km/h</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les dernières 24h:</p></div>
+    <div class="col-sm-4">1.0 mm</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 3 derniers jours: </p></div>
+    <div class="col-sm-4">1.0 mm</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 7 derniers jours:</p></div>
+    <div class="col-sm-4">2.19 mm</div>
+  </div>
 {% endblock %}
 {% block scripts %}
-  <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
-  <script type='text/javascript'
-          src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+  {% leaflet_js %}
+  <script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}
+
