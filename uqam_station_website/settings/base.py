@@ -69,7 +69,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': config('DB_HOST'),
         'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD')
+        'PASSWORD': config('DB_PASSWORD'),
+        'CONN_MAX_AGE': 3600,
     }
 }
 
