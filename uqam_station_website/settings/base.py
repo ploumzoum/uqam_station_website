@@ -17,6 +17,9 @@ INSTALLED_APPS = [
     'sass_processor',
     'leaflet',
 
+    # Models
+    'models.apps.ModelsConfig',
+
     # Pages du site
     'home.apps.HomeConfig'
 ]
@@ -60,8 +63,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'weather_data': {
+        'NAME': 'BD_labostation__enquete',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': config('DB_HOST'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD')
     }
 }
+
+DATABASE_ROUTERS = ['models.router.ModelsRouter']
 
 
 # Password validation
