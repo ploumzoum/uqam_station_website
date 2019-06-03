@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+
+  station_django:
+    container_name: uqam_station_website
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+
+    networks:
+      riisqdocker_default:
+        ipv4_address: 172.23.0.6
+
+networks:
+  riisqdocker_default:
+    external: true
