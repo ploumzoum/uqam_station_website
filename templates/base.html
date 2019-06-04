@@ -5,7 +5,7 @@
 <html lang="fr" xml:lang="fr">
 
 <head>
-  <title></title>
+<title>{{ title }}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
@@ -31,7 +31,7 @@
 						<li><a class="dropdown-item" href="{% url 'historic_meteograms' %}">Évolution historique</a></li>
 						<li><a class="dropdown-item" href="{% url 'radial_chart' %}">Graphique radial</a></li>
 						<li><a class="dropdown-item" href="{% url 'windrose' %}">Rose des vents</a></li>
-						<li><a class="dropdown-item" href="#">Disdromètre</a></li>
+						<li><a class="dropdown-item" href="{% url 'disdrometer' %}">Disdromètre</a></li>
 						<li><a class="dropdown-item" href="#">Radar</a></li>
 					</ul>
 				</li>

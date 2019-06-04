@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'meteograms.apps.MeteogramsConfig',
     'radial_chart.apps.RadialChartConfig',
     'windrose.apps.WindroseConfig',
+    'disdrometer.apps.DisdrometerConfig',
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'

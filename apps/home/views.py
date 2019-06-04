@@ -12,4 +12,5 @@ def index(request):
     with open(os.path.join(settings.ROOT_DIR, 'media/data/UQAM_DATA_STATION_last.csv')) as last_entry:
         csv_reader = csv.DictReader(last_entry)
         dataset = next(csv_reader)
-        return render(request, 'home/home.html', {'dataset': dataset})
+        return render(request, 'home/home.html', {'title': 'Accueil - Station UQÀM',
+                                                  'dataset': dataset})

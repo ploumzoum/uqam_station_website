@@ -25,4 +25,5 @@ urlpatterns = [
     path('visualisation/meteogrammes/', include('meteograms.urls')),
     path('visualisation/diagramme-radial', include('radial_chart.urls')),
     path('visualisation/rose-des-vent', include('windrose.urls')),
+    path('visualisation/disdrometre', include('disdrometer.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
