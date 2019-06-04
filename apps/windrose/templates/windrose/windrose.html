@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <title>Rose des vents - Station UQÀM</title>
+  <link href="{% sass_src 'windrose/scss/windrose.scss' %}" rel="stylesheet" type="text/css"/>
+
+
+{% endblock %}
+{% block content %}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h1> - Rose des vents - </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p> La rose des vents est un outil graphique permettant de visualiser la répartition de la vitesse
+        et de la direction du vent à un endroit et une période donnés. Pour tracer la rose des vents,
+        nous utilisons un diagramme radial suivant 16 directions cardinales (N, NNE,NE,ENE,E,...)
+        en subdivisant un cercle complet en 32 directions d’occurrence de vent. La méthodologie suivante est
+        employée: </p>
+
+      <ul>
+        <li>Pour un mois au complet, on calcule aux 10 minutes la direction moyenne et le module moyen du vent</li>
+        <li>On groupe ensuite toutes les occurences par subdision</li>
+        <li>On calcule enfin pour chaque subdivision les fréquence d'occurence par intervale de vitesse en km.h-1</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="my-4">
+  <div class="input-group justify-content-around" id="selector">
+    <div id="frequency" class="inline">
+      <h4><b>Choix du mois </b></h4>
+      <ul>
+        <select id="month" name="month">
+          <option value="01"> Janvier</option>
+          <option value="02"> Février</option>
+          <option value="03"> Mars</option>
+          <option value="04"> Avril</option>
+          <option value="05"> Mai</option>
+          <option value="06"> Juin</option>
+          <option value="07"> Juillet</option>
+          <option value="08"> Août</option>
+          <option value="09"> Septembre</option>
+          <option value="10"> Octobre</option>
+          <option value="11"> Novembre</option>
+          <option value="12"> Décembre</option>
+        </select>
+      </ul>
+    </div>
+    <div id="annee" class="inline">
+      <ul><h4><b>Choix de l'année</b></h4>
+        <select id="period" name="period">
+          <option value="2014"> 2014</option>
+          <option value="2015"> 2015</option>
+          <option value="2016"> 2016</option>
+          <option value="2017"> 2017</option>
+          <option value="2018"> 2018</option>
+          <option value="2019"> 2019</option>
+
+        </select>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+  <p id="explication"></p>
+  <div id="container" style="min-width: 420px; max-width: 600px; height: 800px; margin: 0 auto"></div>
+
+  <section id="paragraph">
+    <p><b>Réalisation: Guillaume Dueymes</b></p>
+    <p id="para2"></p>
+  </section>
+
+{% endblock %}
+{% block scripts %}
+  <!-- Highchart -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script type='text/javascript' src="{% static 'windrose/js/windrose.js' %}"></script>
+
+{% endblock %}

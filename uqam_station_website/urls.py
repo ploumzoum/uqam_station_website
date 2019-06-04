@@ -23,5 +23,6 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('visualisation/meteogrammes/', include('meteograms.urls')),
-    path('visualisation/diagramme-radial', include('radial_chart.urls'))
+    path('visualisation/diagramme-radial', include('radial_chart.urls')),
+    path('visualisation/rose-des-vent', include('windrose.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -23,7 +23,8 @@ INSTALLED_APPS = [
     # Pages du site
     'home.apps.HomeConfig',
     'meteograms.apps.MeteogramsConfig',
-    'radial_chart.apps.RadialChartConfig'
+    'radial_chart.apps.RadialChartConfig',
+    'windrose.apps.WindroseConfig',
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'
