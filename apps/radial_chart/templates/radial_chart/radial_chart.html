@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block head %}
+  <title>Diagramme radial - Station UQÀM</title>
+
+  <link href="{% sass_src 'radial_chart/scss/radial_chart.scss' %}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+{% block content %}
+  <div class="col text-center">
+    <h1> - Diagramme radial - </h1>
+  </div>
+  <div class="wrapper">
+    <div id="graph">
+      <svg></svg>
+    </div>
+  </div>
+  <p><b>Réalisation: Guillaume Dueymes</b> <br><a href="https://bl.ocks.org/susielu/">Code source</a></p>
+{% endblock %}
+{% block scripts %}
+  <!-- D3JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.3.0/d3-legend.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script type="text/javascript" src="{% static 'radial_chart/js/radial_chart.js' %}"></script>
+{% endblock %}

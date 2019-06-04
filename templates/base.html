@@ -8,8 +8,8 @@
   <title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	<link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
-	{% block head %}
+  <link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
+  {% block head %}
 	{% endblock %}
 </head>
 <body>
@@ -29,7 +29,7 @@
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="{% url 'daily_meteograms' %}">Météogramme</a></li>
 						<li><a class="dropdown-item" href="{% url 'historic_meteograms' %}">Évolution historique</a></li>
-						<li><a class="dropdown-item" href="#">Graphique radial</a></li>
+						<li><a class="dropdown-item" href="{% url 'radial_chart' %}">Graphique radial</a></li>
 						<li><a class="dropdown-item" href="#">Rose des vents</a></li>
 						<li><a class="dropdown-item" href="#">Disdromètre</a></li>
 						<li><a class="dropdown-item" href="#">Radar</a></li>
