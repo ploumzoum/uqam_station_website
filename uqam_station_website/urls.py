@@ -22,5 +22,5 @@ from django.conf import settings
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('visualisation/meteogramme', include('meteogram.urls')),
+    path('visualisation/meteogrammes/', include('meteograms.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

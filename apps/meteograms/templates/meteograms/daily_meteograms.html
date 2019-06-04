@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-  <title>Météogramme - Station UQÀM</title>
+  <title>Météogramme du jour - Station UQÀM</title>
 {% endblock %}
 {% block content %}
   <div class="row">
@@ -10,7 +10,6 @@
       <p class="lead">(Dernière mise à jour: {% now  "j/m/Y à H" %}h - UTC)</p>
     </div>
   </div>
-  <hr class="my-3">
   <div id="graphdiv" class="graph"></div>
   <div id="graphdiv2" class="graph"></div>
   <div id="graphdiv3" class="graph"></div>
@@ -22,6 +21,6 @@
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/windbarb.js"></script>
-  <script src="{% static 'meteogram/js/meteogram.js' %}"></script>
+  <script src="{% static 'meteograms/js/daily_meteograms.js' %}"></script>
 {% endblock %}
 

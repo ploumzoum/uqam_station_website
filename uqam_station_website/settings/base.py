@@ -22,7 +22,7 @@ INSTALLED_APPS = [
 
     # Pages du site
     'home.apps.HomeConfig',
-    'meteogram.apps.MeteogramConfig'
+    'meteograms.apps.MeteogramsConfig'
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'

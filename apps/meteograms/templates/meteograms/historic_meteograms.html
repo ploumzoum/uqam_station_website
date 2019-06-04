@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+  <title>Météogramme d'historique - Station UQÀM</title>
+{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col text-center">
+      <h1> - Historique des quotidiennes de précipitations et de température de la station - </h1>
+    </div>
+  </div>
+  <div id="graphdiv" class="graph"></div>
+  <div id="graphdiv2" class="graph"></div>
+{% endblock %}
+{% block scripts %}
+  <!-- Highchart -->
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+  <script src="https://code.highcharts.com/modules/boost.js"></script>
+  <script src="{% static 'meteograms/js/historic_meteograms.js' %}"></script>
+
+{% endblock %}
