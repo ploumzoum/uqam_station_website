@@ -15,4 +15,4 @@ RUN pip install --upgrade pip
 RUN pip install -r /usr/server/development.pip
 
 # Add the current directory(the web folder) to Docker container
-ADD . /usr/server
+ADD ../../ /usr/server

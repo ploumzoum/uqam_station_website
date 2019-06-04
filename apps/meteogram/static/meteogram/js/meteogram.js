@@ -140,7 +140,7 @@ $(function () {
       }
     }
   };
-  jQuery.get('/static/shared/data/UQAM_DATA_STATION.csv', function (data) {
+  jQuery.get('/media/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -280,7 +280,7 @@ $(function () {
       }
     }
   };
-  jQuery.get('/static/shared/data/UQAM_DATA_STATION.csv', function (data) {
+  jQuery.get('/media/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -398,7 +398,7 @@ $(function () {
       }
     }
   };
-  $.get('/static/shared/data/UQAM_DATA_STATION.csv', function (data) {
+  $.get('/media/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -505,7 +505,7 @@ $(function () {
 
     }
   };
-  $.get('/static/shared/data/UQAM_DATA_STATION.csv', function (data) {
+  $.get('/media/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
