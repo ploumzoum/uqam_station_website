@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Anémomètre ultrasonique WS425 -</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/anemometre_sonic.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    Le capteur de vent Vaisala WINDCAP® WS425 utilise les ultrasons pour déterminer l'intensité et la direction du
+    vent horizontal. Il est constitué de trois transducteurs ultrasoniques disposés à égale distance les uns des
+    autres sur le plan horizontal (à 120· les uns des autres) Chacun des transducteurs est à la fois émetteur et
+    récepteur d'ultrasons.
+
+    Le principe de la mesure se base dans le temps de transit, le temps qui prend l'onde sonore à parcourir la
+    distance entre la pair émetteur - récepteur. Ce temps dépend de la composante de la vitesse le long du trajet. Le
+    temps de transit est mesuré dans les deux directions. Si le vent est nul ces deux temps seront égaux. Par contre,
+    lorsque le vent a une composante non nulle selon le trajet de l'onde, le temps de transit dans la direction du
+    vent est supérieur à ce temps dans la direction contre-vent. En utilisant la différence des deux temps de transit
+    le microcontrôleur WAS425A calcule la vitesse du vent sur le trajet inter transducteur. La même méthode de calcul
+    est répétée pour les trois trajectoires. Le microcontrôleur calcule la vitesse et la direction du vent ainsi que
+    ses composantes orthogonales.
+  </p>
+  <p><b>INTENSITÉ DU VENT</b></p>
+  <ul>
+    <li><b>Étendue de la mesure :</b>
+      0...65 m/s (0...144 mph, 0...125 knots)
+    </li>
+    <li><b>Précision : </b>±0.135 m/s (±0.3 mph, ±0.26 knots) ou 3% de la lecteure (celui qui est le plus grand)
+    </li>
+    <li><b>Constante de distance : </b> Pratiquement nulle</li>
+    <li><b>Seuil : </b> Pratiquement nul</li>
+  </ul>
+  <p><b>DIRECTION DU VENT</b></p>
+  <ul>
+    <li><b>Étendue de la mesure : </b>0...360·</li>
+    <li><b>Résolution : </b>1·</li>
+    <li><b>Précision : </b>±2·</li>
+    <li><b>Constante de distance : </b> Pratiquement nulle</li>
+    <li><b>Seuil : </b> Pratiquement nul</li>
+
+    <li><b>Fiche technique : </b><a href="/media/documents/manuals/WS425Datasheet.pdf">Lien de
+      téléchargement</a></li>
+    <li><b>Guide de l'usager : </b><a href="/media/documents/manuals/WS425UsersGuide.pdf">Lien de
+      téléchargement</a></li>
+  </ul>
+{% endblock %}

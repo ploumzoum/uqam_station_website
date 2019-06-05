@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Anémomètre à coupelles WAA 151 VAISALA -</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/anemometre.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    L'anémomètre optoélectronique de VAISALA est muni d'un rotor à trois coupelles. Sous l'effet du vent, le rotor se
+    met à tourner autour d'un axe vertical et entraîne une roue. Cette dernière coupe 14 fois par révolution un faisceau
+    infrarouge dont le signal est récupéré par un phototransistor. Le train d'impulsion généré est directement
+    proportionnel à la vitesse du vent (par exemple 100Hz = 10 m/s).
+  </p>
+  <ul>
+    <li><b>Étendue de la mesure : </b>0.4 à 75 m/s</li>
+    <li><b>Seuil : </b>&lt;0.5 m/s</li>
+    <li><b>Constante de distance : </b>2 m</li>
+    <li><b>Fonction de transfert caractéristique : </b>
+      U=0,1007 R + 0,3278, U = vitesse du vent, R = taux d'impulsions
+    </li>
+    <li><b>Fonction de transfer simple : </b>U=0.1 R</li>
+    <li><b>Précision : </b>
+      fonction de transfer caractéristique : ±0,17 m/s
+      fonction de transfer simple : ±0,5 m/s
+    </li>
+    <li><b>Guide de référence  </b><a href="/media/documents/manuals/WAA151Manual_en.pdf">Lien de
+      téléchargement</a></li>
+  </ul>
+{% endblock %}

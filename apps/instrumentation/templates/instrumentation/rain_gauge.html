@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">Pluviomètre Geonor T-200 B </h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/pluviometre.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    La série T-200B de pluviomètres à balance est conçue pour mesurer les
+    précipitations automatiquement
+    tout au long de l’année. La précipitation peut être mesurée en temps réel à
+    n’importe quel intervalle de temps.
+  </p>
+  <ul>
+    <li><b>Capacité : </b>600mm (12 litres)</li>
+    <li><b>Superficie d’ouverture : </b>200 cm2</li>
+    <li><b>Sensibilité : </b>0.05 mm</li>
+    <li><b>Précision : </b>0.1% de l’échelle au complet</li>
+    <li><b>Température d'opération : </b>-40 à +60° C</li>
+    <li><b>Guide de référence : </b><a href="/media/documents/manuals/t-200b_man_fr.pdf">Lien de téléchargement</a></li>
+  </ul>
+{% endblock %}

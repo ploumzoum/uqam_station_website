@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">Girouette WAV 151</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/girouette.png" alt="Station UQAM">
+  </div>
+<hr class="my-4">
+  <p> Un disque solidaire de l'axe de la girouette suit les changements de la direction du vent. Des diodes et des
+    photorécepteurs se faisant face sont disposés de chaque coté du disque sur six orbites différentes. Chaque diode
+    infrarouge voit son faisceau obstrué ou non, suivant la disposition du disque «GRAY» qui code sur six bits, 64
+    positions avec une résolution de 5,6°. Un controleur commun à la girouette et à l'anémomètre transforme alors les
+    informations numériques du code GRAY, en variation de courant (0-20 mA).
+
+    Cet appareil est caracterisé par une faible inertie et un seuil de démarrage bas ( &lt; 0.4 m/s). De plus, il est
+    équipé d'un système de chauffage axial qui fournit nominalement 10W. Un thermostat installée dans le bras support
+    de l'anémomètre/girouette Vaisala, déclenche le chauffage pour des températures inférieurs à 4° C. On protège
+    ainsi les deux instruments contre la formation du gel. Le défi de l'installation de cet instrument réside dans
+    l'alignement de l'appareil vers le Nord.
+  </p>
+  <ul>
+    <li><b>Étendue de la mesure : </b>0 ... 360°</li>
+    <li><b>Seuil de démarrage: </b>&lt;0.4 m/s</li>
+    <li><b>Resolution : </b>5.6°<b></b></li>
+    <li><b>Rapport d'atténuation: </b>0.19<b></b></li>
+    <li><b>Constante de distance: </b>0.4 m<b></b></li>
+    <li><b>Justesse : </b>supérieur à ±3°<b></b></li>
+    <li><b>Température d'opération : </b>-50 ... +55° C</li>
+    <li><b>Guide d'introduction : </b><a href="/media/documents/manuals/IntroWAV151.pdf">Lien de
+      téléchargement</a></li>
+    <li><b>Guide de référence : </b><a href="/media/documents/manuals/WAV151QuickReferenceGuide.pdf">Lien
+      de téléchargement</a></li>
+  </ul>
+{% endblock %}

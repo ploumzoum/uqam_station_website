@@ -27,25 +27,25 @@
 				<li class="nav-item dropdown">
 					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Visualisation</div>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="{% url 'daily_meteograms' %}">Météogramme</a></li>
+						<li><a class="dropdown-item" href="{% url 'daily_meteograms' %}">Météogrammes</a></li>
 						<li><a class="dropdown-item" href="{% url 'historic_meteograms' %}">Évolution historique</a></li>
 						<li><a class="dropdown-item" href="{% url 'radial_chart' %}">Graphique radial</a></li>
 						<li><a class="dropdown-item" href="{% url 'windrose' %}">Rose des vents</a></li>
-						<li><a class="dropdown-item" href="{% url 'disdrometer' %}">Disdromètre</a></li>
+						<li><a class="dropdown-item" href="{% url 'disdrometer_observations' %}">Disdromètre</a></li>
 						<li><a class="dropdown-item" href="{% url 'weather_radar' %}">Radar météo</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
 					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Instrumentation</div>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Anémomètre à coupelles</a></li>
-						<li><a class="dropdown-item" href="#">Girouette</a></li>
-						<li><a class="dropdown-item" href="#">Anémomètre ultrasonique</a></li>
-						<li><a class="dropdown-item" href="#">Pluviomètre</a></li>
-						<li><a class="dropdown-item" href="#">Disdromètre</a></li>
-						<li><a class="dropdown-item" href="#">Radiomètres</a></li>
-						<li><a class="dropdown-item" href="#">Température - Humidité</a></li>
-						<li><a class="dropdown-item" href="#">Datalogger</a></li>
+						<li><a class="dropdown-item" href="{% url 'anemometer' %}">Anémomètre à coupelles</a></li>
+						<li><a class="dropdown-item" href="{% url 'weathercock' %}">Girouette</a></li>
+						<li><a class="dropdown-item" href="{% url 'ultrasonic_anemometer' %}">Anémomètre ultrasonique</a></li>
+						<li><a class="dropdown-item" href="{% url 'rain_gauge' %}">Pluviomètre</a></li>
+						<li><a class="dropdown-item" href="{% url 'disdrometer' %}">Disdromètre</a></li>
+						<li><a class="dropdown-item" href="{% url 'radiometers' %}">Radiomètres</a></li>
+						<li><a class="dropdown-item" href="{% url 'temperature_humidity' %}">Température - Humidité</a></li>
+						<li><a class="dropdown-item" href="{% url 'datalogger' %}">Datalogger</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">

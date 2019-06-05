@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Température et humidité: transmetteur HMD60 Y -</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/therm_hum.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    Le capteur d'humidité de haute précision intègre la technologie avancée HUMICAP, d'excellente stabilité à long
+    terme. Le senseur de température est de type Pt 1000 RTD.
+    Un abri ventilé de la série DTR500 protège tout le dispositif contre le rayonnement solaire et les précipitations.
+  </p>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th></th>
+      <th scope="col">HUMICAP</th>
+      <th scope="col">Pt 1000 RTD</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">Étendue de la mesure</th>
+      <td>0 - 100%</td>
+      <td>-40°C - 80°C</td>
+    </tr>
+    <tr>
+      <th scope="row">Précision</th>
+      <td>± 25W/m2</td>
+      <td>±(0.3°C + 0.005t)</td>
+    </tr>
+    <tr>
+      <th scope="row">Temps de réponse</th>
+      <td>15 s</td>
+      <td>0.1 s</td>
+    </tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><b>Document technique transmetteur: </b><a
+      href="/media/documents/manuals/CEN-G-HMD60-70-datasheet-B210839FR.pdf">Lien de téléchargement</a>
+    </li>
+    <li><b>Document technique 2 transmetteur : </b><a
+      href="/media/documents/manuals/HUMICAP-Technology-description-B210781EN-C_0.pdf">Lien de
+      téléchargement</a></li>
+    <li><b>Document technique 3 transmetteur : </b><a
+      href="/media/documents/manuals/3766HMD60.wiring diagram.pdf">Lien de téléchargement</a></li>
+    <li><b>Document technique abri : </b><a
+      href="/media/documents/manuals/DTR500-Datasheet-B210906EN-F.pdf">Lien de téléchargement</a></li>
+  </ul>
+{% endblock %}

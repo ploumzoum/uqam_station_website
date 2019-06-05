@@ -14,8 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls.static import static
-from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include
 
 from django.conf import settings
 
@@ -27,4 +26,5 @@ urlpatterns = [
     path('visualisation/rose-des-vent', include('windrose.urls')),
     path('visualisation/disdrometre', include('disdrometer.urls')),
     path('visualisation/radar-meteo', include('weather_radar.urls')),
+    path('instrumentation/', include('instrumentation.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

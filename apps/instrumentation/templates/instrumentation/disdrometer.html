@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Disdromètre -</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/disdrometre.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    L'OTT Parsivel est un disdromètre laser moderne que mesure les divers types de précipitations. Le Parsivel capture à
+    la fois la taille et la vitesse de la chute des particules, en les classant séparément dans l'une des 32 classes de
+    taille et de vitesse. Les données brutes sont utilisées pour calculer le type, la quantité, l'intensité et l'énergie
+    cinétique de la précipitation, ainsi que la visibilité et la réflectivité radar équivalente.
+    Le disdromètre permet de faire la distinction entre la pluie et la neige. Une équipe de recherche sous la direction
+    de
+    la Professeure Julie Thériault développe des méthodes diagnostiques pour distinguer les différentes types de
+    précipitation : la bruine, la pluie, la neige mouillée, la neige, le grésil, la pluie verglaçante et la grêle.
+  </p>
+  <ul>
+    <li><b>Étendue de la mesure : </b>0.4 à 75 m/s</li>
+    <li><b>Seuil : </b>&lt;0.5 m/s</li>
+    <li><b>Constante de distance : </b>2 m</li>
+    <li><b>Fonction de transfert caractéristique : </b>
+      U=0,1007 R + 0,3278, U = vitesse du vent, R = taux d'impulsions
+    </li>
+    <li><b>Fonction de transfer simple : </b>U=0.1 R</li>
+    <li><b>Précision : </b>
+      fonction de transfer caractéristique : ±0,17 m/s
+      fonction de transfer simple : ±0,5 m/s
+    </li>
+    <li><b>Guide de référence  </b><a href="/media/documents/manuals/Parsivel2_fr.pdf">Lien de
+      téléchargement</a></li>
+    <li><b>Fiche technique  </b><a href="/media/documents/manuals/Ott_OTT_Parsivel2.pdf">Lien de
+      téléchargement</a></li>
+  </ul>
+{% endblock %}

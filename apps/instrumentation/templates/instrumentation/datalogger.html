@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">Datalogger CR3000</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/datalogger.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    Les données sont enregistrées dans un datalogger CR3000 de Campbell et sauvegardées sur un serveur serveur local au
+    département des Sciences de l'Atmosphère de l'UQÀM. Les sauvegardes se font à chaque minute.
+    Conçu pour un fonctionnement autonome dans des environnements distants difficiles, le CR3000 se compose d'un boîtier
+    avec alimentation intégrée, un affichage rétroéclairé graphique ou numérique (de huit lignes de 128 par 64 pixels)
+    et un clavier de 16 caractères.
+  </p>
+  <ul>
+    <li>Taux d'exécution de program jusqu'à 100 Hz</li>
+    <li>Conversions analogiques / numériques 16 bits</li>
+    <li>Microcontrôleur 16 bits avec 32 bits interne</li>
+    <li>Horloge temps réel à compensation de température</li>
+    <li>Données stockées dans des tableaux avec un horodatage</li>
+    <li>Mémoire de stockage de données de 4 Mo. En cas de besoin, l’utilisation d’une carte CompactFlash® permet
+      l’augmentation de la capacité de stockage
+    </li>
+    <li>L’exécution des programmes et l’enregistrement des données et de l’heure d’acquisition se poursuivent même si le
+      CR3000 est déconnecté de sa source d’alimentation puissance
+    </li>
+    <li>Protocoles de transmission supportés : PakBus, Modbus et DNP3, TCP / IP, FTP et SMTP</li>
+    <br>
+    <li><b>Manuel d'utilisation : </b><a href="/media/documents/manuals/cr3000_man.pdf">Lien de téléchargement</a></li>
+    <li><b>Document technique 1 : </b><a href="/media/documents/manuals/cr3000_specs.pdf">Lien de téléchargement</a>
+    </li>
+    <li><b>Document technique 2 : </b><a href="/media/documents/manuals/cr3000_br.pdf">Lien de téléchargement</a></li>
+    <li><b>Panneau technique 3 : </b><a href="/media/documents/manuals/CR3000_2D_drawing.pdf">Lien de téléchargement</a>
+    </li>
+  </ul>
+{% endblock %}

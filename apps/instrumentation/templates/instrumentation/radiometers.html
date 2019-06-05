@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+  <link href="{% sass_src 'instrumentation/scss/instrumentation.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Radiomètres net CNR1 -</h1>
+  <hr class="my-4">
+  <div class="text-center">
+    <img src="/media/images/radiometres.png" alt="Station UQAM">
+  </div>
+  <hr class="my-4">
+  <p>
+    L'appareil intègre deux pyranomètres <b>CM3</b> (sensibles au rayonnement solaire) et deux pyrgéomètres <b>CG3</b> (sensibles au
+    rayonnement infrarouge terrestre). Une paire pyranomètre-pyrgéomètre est dirigée vers le ciel, tandis qu'une autre
+    paire pyranomètre-pyrgéomètre est dirigée vers le sol. On procède ainsi à l'étude du bilan radiatif. On mesure les
+    quatre composantes du bilan radiatif : l'énergie solaire (incidente et réfléchie) et terrestre (incidente et émise)
+    en Watt/m².
+  </p>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th></th>
+      <th scope="col">CM3</th>
+      <th scope="col">CG3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">Temps de réponse</th>
+      <td>18 s</td>
+      <td>18 s</td>
+    </tr>
+    <tr>
+      <th scope="row">Erreur de direction</th>
+      <td>± 25W/m2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th scope="row">Intervalle spectrale</th>
+      <td>0.3 - 3 µm</td>
+      <td>5 - 42 µm</td>
+    </tr>
+    <tr>
+      <th scope="row">Signal de sortie</th>
+      <td>0 - 50 mV</td>
+      <td>-25 - 25 mV</td>
+    </tr>
+    <tr>
+      <th scope="row">Justesse attendue</th>
+      <td>± 10%</td>
+      <td>± 10%</td>
+    </tr>
+    <tr>
+      <th scope="row">Température d'opération</th>
+      <td>-40°C à 70°C</td>
+      <td>-40°C à 70°C</td>
+    </tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><b>Document technique : </b><a href="/media/documents/manuals/cnr1_br.pdf">Lien de
+      téléchargement</a></li>
+    <li><b>Guide de l'usager : </b><a href="/media/documents/manuals/cnr1_man.pdf">Lien de
+      téléchargement</a></li>
+  </ul>
+{% endblock %}
