@@ -1,0 +1,12 @@
+.display-data {
+  font-weight: bold; }
+
+#map {
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 576px) {
+  .display-data {
+    padding-top: 1rem; } }
+
+/*# sourceMappingURL=home.css.map */

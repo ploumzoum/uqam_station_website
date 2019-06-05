@@ -3,11 +3,14 @@
 
 {% load leaflet_tags %}
 {% load home_extras %}
+{% load sass_tags %}
+
 {% block head %}
+  <link href="{% sass_src 'home/scss/home.scss' %}" rel="stylesheet" type="text/css"/>
   {% leaflet_css %}
 {% endblock %}
 {% block content %}
-    <h1 class="display-4 mb-5 text-center">Station météorologique de l'UQÀM</h1>
+  <h1 class="display-4 mb-5 text-center">Station météorologique de l'UQÀM</h1>
 
   {% leaflet_map "map" callback="window.map_init_basic" %}
 
@@ -23,7 +26,7 @@
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Date:</p></div>
-    <div class="col-sm-4">{{ dataset.Temps | get_datetime}}</div>
+    <div class="col-sm-4">{{ dataset.Temps | get_datetime }}</div>
   </div>
   <hr class="my-4">
   <div class="row">

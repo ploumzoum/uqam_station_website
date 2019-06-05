@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-  <div class="row">
-    <div class="col text-center">
-      <h1> - Historique des quotidiennes de précipitations et de température de la station - </h1>
-    </div>
-  </div>
+
+  <h1 class="text-center"> - Historique des quotidiennes de précipitations et de température de la station - </h1>
+  <hr class="my-4">
   <div id="graphdiv" class="graph"></div>
   <div id="graphdiv2" class="graph"></div>
+  <p><b>Réalisation: Guillaume Dueymes</b></p>
 {% endblock %}
 {% block scripts %}
   <!-- Highchart -->

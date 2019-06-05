@@ -7,26 +7,19 @@
 
 {% endblock %}
 {% block content %}
-  <div class="row mb-5">
-    <div class="col text-center">
-      <h1> - Rose des vents - </h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p> La rose des vents est un outil graphique permettant de visualiser la répartition de la vitesse
-        et de la direction du vent à un endroit et une période donnés. Pour tracer la rose des vents,
-        nous utilisons un diagramme radial suivant 16 directions cardinales (N, NNE,NE,ENE,E,...)
-        en subdivisant un cercle complet en 32 directions d’occurrence de vent. La méthodologie suivante est
-        employée: </p>
 
-      <ul>
-        <li>Pour un mois au complet, on calcule aux 10 minutes la direction moyenne et le module moyen du vent</li>
-        <li>On groupe ensuite toutes les occurences par subdision</li>
-        <li>On calcule enfin pour chaque subdivision les fréquence d'occurence par intervale de vitesse en km.h-1</li>
-      </ul>
-    </div>
-  </div>
+  <h1 class="text-center"> - Rose des vents - </h1>
+  <p> La rose des vents est un outil graphique permettant de visualiser la répartition de la vitesse
+    et de la direction du vent à un endroit et une période donnés. Pour tracer la rose des vents,
+    nous utilisons un diagramme radial suivant 16 directions cardinales (N, NNE,NE,ENE,E,...)
+    en subdivisant un cercle complet en 32 directions d’occurrence de vent. La méthodologie suivante est
+    employée: </p>
+
+  <ul>
+    <li>Pour un mois au complet, on calcule aux 10 minutes la direction moyenne et le module moyen du vent</li>
+    <li>On groupe ensuite toutes les occurences par subdision</li>
+    <li>On calcule enfin pour chaque subdivision les fréquence d'occurence par intervale de vitesse en km.h-1</li>
+  </ul>
   <hr class="my-4">
   <div class="input-group justify-content-around" id="selector">
     <div id="frequency" class="inline">
@@ -57,21 +50,12 @@
           <option value="2017"> 2017</option>
           <option value="2018"> 2018</option>
           <option value="2019"> 2019</option>
-
         </select>
       </ul>
     </div>
   </div>
-  <br>
-  <br>
-  <p id="explication"></p>
   <div id="container" style="min-width: 420px; max-width: 600px; height: 800px; margin: 0 auto"></div>
-
-  <section id="paragraph">
-    <p><b>Réalisation: Guillaume Dueymes</b></p>
-    <p id="para2"></p>
-  </section>
-
+  <p><b>Réalisation: Guillaume Dueymes</b></p>
 {% endblock %}
 {% block scripts %}
   <!-- Highchart -->

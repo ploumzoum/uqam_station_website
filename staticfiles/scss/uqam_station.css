@@ -7055,6 +7055,9 @@ body {
 main {
   margin-top: 2rem; }
 
+.graph {
+  margin-bottom: 2rem; }
+
 footer {
   background-color: #176087;
   color: #fff;
@@ -7065,19 +7068,5 @@ footer {
   margin-top: auto; }
   footer > .copyright {
     align-self: center; }
-
-.display-data {
-  font-weight: bold; }
-
-#map {
-  width: 100%;
-  height: auto; }
-
-@media (max-width: 576px) {
-  .display-data {
-    padding-top: 1rem; } }
-
-.graph {
-  margin-bottom: 4rem; }
 
 /*# sourceMappingURL=uqam_station.css.map */

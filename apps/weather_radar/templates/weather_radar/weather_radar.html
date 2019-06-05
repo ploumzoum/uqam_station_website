@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="text-center">
+    <h1> - Observations du Radar - </h1>
+    <p>Cette page est en cours de développement</p>
+    <hr class="my-4">
+    <p class="lead"> (Observations de la journée du 12/11/2018)</p>
+  </div>
+  <div id="graphdiv" class="graph"></div>
+  <div id="graphdiv2" class="graph"></div>
+  <p><b>Réalisation: Guillaume Dueymes</b></p>
+{% endblock %}
+{% block scripts %}
+  <!-- Highchart -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+  <script type='text/javascript' src="{% static 'weather_radar/js/weather_radar.js' %}"></script>
+{% endblock %}

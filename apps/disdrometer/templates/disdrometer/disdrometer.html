@@ -6,43 +6,19 @@
   <link href="{% sass_src 'disdrometer/scss/disdrometer.scss' %}" rel="stylesheet" type="text/css"/>
 {% endblock %}
 {% block content %}
-
-  <div class="row">
-    <div class="col text-center">
-      <h1> - Observation du disdromètre - </h1>
-    </div>
-  </div>
+  <h1 class="text-center"> - Observations du disdromètre - </h1>
   <hr class="my-4">
-
   <p>Le disdromètre permet de faire la distinction entre la pluie et la neige. Une équipe de recherche sous la
     direction de la Professeure Julie Thériault développe des méthodes diagnostiques pour distinguer les différentes
     types de précipitation : la bruine, la pluie, la neige mouillée, la neige, le grésil, la pluie verglaçante et la
     grêle.</p>
   <hr class="my-4">
-
-  <p class="text-center"> (Évolution aux 10 minutes pour la journée du: {% now "j/m/Y" %})</p>
-
-
-  <div id="graphdiv"></div>
-  <div id="graphdiv2"></div>
+  <p class="lead text-center"> (Évolution aux 10 minutes pour la journée du: {% now "j/m/Y" %})</p>
+  <div id="graphdiv" class="graph"></div>
+  <div id="graphdiv2" class="graph"></div>
   <hr class="my-4">
-
-
-  <div class="row">
-    <div class="col text-center">
-      <img src="/media/images/parsivel.png" alt="Station UQAM">
-    </div>
-  </div>
-
-
-
+  <img src="/media/images/parsivel.png" alt="Station UQAM">
   <p><b>Réalisation: Guillaume Dueymes</b></p>
-  <p id="para2"></p>
-
-
-  <div id="glyph"><a href="#para">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a></div>
 {% endblock %}
 {% block scripts %}
   <!-- Highchart -->
