@@ -26,5 +26,6 @@ urlpatterns = [
     path('visualisation/rose-des-vent', include('windrose.urls')),
     path('visualisation/disdrometre', include('disdrometer.urls')),
     path('visualisation/radar-meteo', include('weather_radar.urls')),
-    path('instrumentation/', include('instrumentation.urls'))
+    path('instrumentation/', include('instrumentation.urls')),
+    path('metar', include('metar.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

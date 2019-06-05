@@ -1,4 +1,4 @@
-ECmarkers= [
+[
   {
     "index": "0",
     "CD": "AB",
@@ -176,8 +176,8 @@ ECmarkers= [
     "lat": 53.55,
     "lng": -114.1,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "15",
@@ -872,8 +872,8 @@ ECmarkers= [
     "lat": 52.266666666666666,
     "lng": -121.03333333333333,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "73",
@@ -932,8 +932,8 @@ ECmarkers= [
     "lat": 54.25,
     "lng": -133.06666666666666,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "78",
@@ -944,8 +944,8 @@ ECmarkers= [
     "lat": 54.25,
     "lng": -133.06666666666666,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "79",
@@ -1040,8 +1040,8 @@ ECmarkers= [
     "lat": 48.666666666666664,
     "lng": -124.83333333333333,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "87",
@@ -1232,8 +1232,8 @@ ECmarkers= [
     "lat": 54.166666666666664,
     "lng": -131.66666666666666,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "103",
@@ -1664,8 +1664,8 @@ ECmarkers= [
     "lat": 53.03333333333333,
     "lng": -100.93333333333334,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "139",
@@ -1952,8 +1952,8 @@ ECmarkers= [
     "lat": 47.28333333333333,
     "lng": -54.0,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "163",
@@ -1988,8 +1988,8 @@ ECmarkers= [
     "lat": 59.96666666666667,
     "lng": -64.16666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "166",
@@ -2000,8 +2000,8 @@ ECmarkers= [
     "lat": 57.11666666666667,
     "lng": -61.46666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "167",
@@ -2036,8 +2036,8 @@ ECmarkers= [
     "lat": 50.21666666666667,
     "lng": -57.56666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "170",
@@ -2096,8 +2096,8 @@ ECmarkers= [
     "lat": 55.45,
     "lng": -60.21666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "175",
@@ -2156,8 +2156,8 @@ ECmarkers= [
     "lat": 47.36666666666667,
     "lng": -55.8,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "180",
@@ -2228,8 +2228,8 @@ ECmarkers= [
     "lat": 54.71666666666667,
     "lng": -58.35,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "186",
@@ -2528,8 +2528,8 @@ ECmarkers= [
     "lat": 64.38333333333334,
     "lng": -115.01666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "211",
@@ -2564,8 +2564,8 @@ ECmarkers= [
     "lat": 63.6,
     "lng": -113.85,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "214",
@@ -2696,8 +2696,8 @@ ECmarkers= [
     "lat": 63.31666666666667,
     "lng": -64.15,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "225",
@@ -2744,8 +2744,8 @@ ECmarkers= [
     "lat": 68.46666666666667,
     "lng": -66.81666666666666,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "229",
@@ -2756,8 +2756,8 @@ ECmarkers= [
     "lat": 64.95,
     "lng": -63.56666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "230",
@@ -2804,8 +2804,8 @@ ECmarkers= [
     "lat": 69.26666666666667,
     "lng": -119.21666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "234",
@@ -2888,8 +2888,8 @@ ECmarkers= [
     "lat": 68.5,
     "lng": -113.21666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "241",
@@ -2900,8 +2900,8 @@ ECmarkers= [
     "lat": 68.9,
     "lng": -75.15,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "242",
@@ -2972,8 +2972,8 @@ ECmarkers= [
     "lat": 61.56666666666667,
     "lng": -64.65,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "248",
@@ -3080,8 +3080,8 @@ ECmarkers= [
     "lat": 45.8,
     "lng": -80.53333333333333,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "257",
@@ -3584,8 +3584,8 @@ ECmarkers= [
     "lat": 48.61666666666667,
     "lng": -79.45,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "299",
@@ -3956,8 +3956,8 @@ ECmarkers= [
     "lat": 55.31666666666667,
     "lng": -63.21666666666667,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "330",
@@ -5372,8 +5372,8 @@ ECmarkers= [
     "lat": 68.95,
     "lng": -137.28333333333333,
     "METAR": "1",
-    "Year_ini": NaN,
-    "Year_fin": NaN
+    "Year_ini": null,
+    "Year_fin": null
   },
   {
     "index": "448",

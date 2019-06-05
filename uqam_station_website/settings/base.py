@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'disdrometer.apps.DisdrometerConfig',
     'weather_radar.apps.WeatherRadarConfig',
     'instrumentation.apps.InstrumentationConfig',
+    'metar.apps.MetarConfig',
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'
@@ -144,5 +145,4 @@ LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (45.508582, -73.568797),
     'DEFAULT_ZOOM': 16,
     'MIN_ZOOM': 3,
-    'MAX_ZOOM': 18,
 }
