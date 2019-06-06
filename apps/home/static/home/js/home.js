@@ -1,5 +1,14 @@
-function map_init_basic(map, options) {
-  L.marker([45.508582, -73.568797]).addTo(map);
+
+let map = L.map('map', {
+  center: [45.508582, -73.568797],
+  minZoom: 2,
+  zoom: 13
+});
+L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+ subdomains: ['a','b','c']
+}).addTo( map );
+L.marker([45.508582, -73.568797]).addTo(map);
   let uqam_station = {
     "Name": "Station UQAM",
     "lat": 45.508582,
@@ -14,4 +23,3 @@ function map_init_basic(map, options) {
   L.marker( [uqam_station.lat, uqam_station.lng])
     .bindPopup(popup)
     .addTo(map);
-}

@@ -15,7 +15,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
-    'leaflet',
 
     # Models
     'models.apps.ModelsConfig',
@@ -28,7 +27,7 @@ INSTALLED_APPS = [
     'disdrometer.apps.DisdrometerConfig',
     'weather_radar.apps.WeatherRadarConfig',
     'instrumentation.apps.InstrumentationConfig',
-    'metar.apps.MetarConfig',
+    'data_maps.apps.DataMapsConfig',
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'
@@ -141,8 +140,3 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(ROOT_DIR, 'static'),
 ]
 
-LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (45.508582, -73.568797),
-    'DEFAULT_ZOOM': 16,
-    'MIN_ZOOM': 3,
-}

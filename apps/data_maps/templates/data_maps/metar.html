@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block head %}
+  <link href="{% sass_src 'data_maps/scss/data_maps.scss' %}" rel="stylesheet" type="text/css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Localisation des stations METAR -</h1>
+  <hr class="my-4">
+  <div id="map"></div>
+  <p>Source <a href="http://climate.weather.gc.ca/" target="_blank">Environment Canada</a>
+  <p>Guillaume Dueymes // <a href="http://www.escer.uqam.ca/personnel.html" target="_blank">ESCER center</a>
+  <p><b>[08 Feb 2018]</b></p>
+{% endblock %}
+{% block scripts %}
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+          integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+          crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js "></script>
+
+  <script src="{% static 'data_maps/js/metar.js' %}"></script>
+{% endblock %}
