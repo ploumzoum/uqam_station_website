@@ -12,7 +12,7 @@ $.getJSON('/media/data/SOUNDING.json', (ECmarkers) => {
 
   for (let i = 0; i < ECmarkers.length; ++i) {
     let popup = '<b>Name:</b>' + ECmarkers[i].STATION
-      + '<a class="btn" href="/donnees/sounding/formulaire">Récupérer des données</a>'
+      + '<button type="button" class="btn" data-id="/donnees/sounding/formulaire">';
 
     let m = L.marker([ECmarkers[i].lat, ECmarkers[i].lng])
       .bindPopup(popup);

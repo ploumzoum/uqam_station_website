@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
+    'bootstrap_modal_forms',
 
     # Models
     'models.apps.ModelsConfig',
