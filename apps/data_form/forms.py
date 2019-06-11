@@ -1,6 +1,8 @@
 from bootstrap_datepicker_plus import DatePickerInput, TimePickerInput
 from django import forms
 
+from models.weather_dataset import WeatherDataset
+
 
 class SingleDateForm(forms.Form):
     date = forms.DateField(
@@ -8,8 +10,8 @@ class SingleDateForm(forms.Form):
         required=True,
         widget=DatePickerInput(
             options={
-                'format': '%d-%m-%Y',
-                'minDate': '01/01/2018'
+                'format': 'DD-MM-YYYY',
+                'minDate': WeatherDataset.objects.first().date
             }
         )
     )

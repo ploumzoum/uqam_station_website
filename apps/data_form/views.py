@@ -21,5 +21,5 @@ def data_form(request):
         # if a GET (or any other method) we'll create a blank form
     else:
         form = SingleDateForm()
-    print(form['data_type'])
+
     return render(request, 'data_form/data_form.html', {'form': form})
