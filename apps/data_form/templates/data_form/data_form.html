@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% load widget_tweaks %}
+{% block head %}
+  <link href="{% sass_src 'data_form/scss/data_form.scss' %}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+{% block content %}
+  <h1 class="text-center">- Données -</h1>
+  <hr class="my-4">
+  <form action="/your-name/" method="post" class="form">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="id_date">{{ form.date.label }}</label>
+      {{ form.date }}
+    </div>
+     <div class="form-group">
+      <label for="id_time">{{ form.time.label }}</label>
+      {{ form.time }}
+    </div>
+    <div class="form-group">
+      <label for="id_data_type">{{ form.data_type.label }}</label>
+      {{ form.data_type|add_class:"custom-select" }}
+    </div>
+    <button class="btn btn-primary" type="submit" >Envoyer</button>
+  </form>
+
+{% endblock %}
+{% block scripts %}
+  {{ form.media }}
+{% endblock %}

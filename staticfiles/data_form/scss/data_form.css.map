@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "data_form.css",
+	"sources": [
+		"data_form.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,gCAAgC,CAAC;EAC/B,KAAK,EAAE,gBAAgB,GACxB"
+}

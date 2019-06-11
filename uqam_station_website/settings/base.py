@@ -1,5 +1,6 @@
 import os
 from decouple import config
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -16,7 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'bootstrap_modal_forms',
-
+    'bootstrap_datepicker_plus',
+    'widget_tweaks',
     # Models
     'models.apps.ModelsConfig',
 
@@ -29,6 +31,7 @@ INSTALLED_APPS = [
     'weather_radar.apps.WeatherRadarConfig',
     'instrumentation.apps.InstrumentationConfig',
     'data_maps.apps.DataMapsConfig',
+    'data_form.apps.DataFormConfig'
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'
@@ -83,7 +86,6 @@ DATABASES = {
 
 DATABASE_ROUTERS = ['models.router.ModelsRouter']
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -102,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -115,7 +116,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -140,4 +140,3 @@ MEDIA_URL = '/media/'
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(ROOT_DIR, 'static'),
 ]
-
