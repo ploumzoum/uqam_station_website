@@ -1,3 +1,4 @@
 class ModelsRouter:
-    def db_for_read(self, model, **hints):
+    @staticmethod
+    def db_for_read(model, **hints):
         return 'weather_data'

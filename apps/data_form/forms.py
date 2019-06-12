@@ -1,7 +1,9 @@
 from bootstrap_datepicker_plus import DatePickerInput, TimePickerInput
 from django import forms
+import json
 
-from models.weather_dataset import WeatherDataset
+from controllers.weather_db import *
+from utils.datetime_encoder import DateTimeEncoder
 
 
 class SingleDateForm(forms.Form):
@@ -11,7 +13,8 @@ class SingleDateForm(forms.Form):
         widget=DatePickerInput(
             options={
                 'format': 'DD-MM-YYYY',
-                'minDate': WeatherDataset.objects.first().date
+                'minDate': str(get_first_record.date),
+                'maxDate': str(get_last_record.date)
             }
         )
     )
@@ -20,3 +23,4 @@ class SingleDateForm(forms.Form):
         label='Heure et minute',
         required=True,
         widget=TimePickerInput())
+    print(get_first_record)

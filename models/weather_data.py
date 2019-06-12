@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class WeatherDataset(models.Model):
+class WeatherData(models.Model):
     date = models.DateTimeField(primary_key=True)
     temperature = models.FloatField(blank=True, null=True)
     humidite = models.FloatField(blank=True, null=True)

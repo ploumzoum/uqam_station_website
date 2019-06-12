@@ -8,7 +8,9 @@ from os.path import abspath, dirname, join
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'uqam_station_website.settings.development')
     project_root = abspath(dirname(__file__))
-    sys.path.append(join(project_root, "apps"))
+    sys.path.append(join(project_root, 'apps'))
+    sys.path.append(join(project_root, 'controllers'))
+    sys.path.append(join(project_root, 'utils'))
 
     try:
         from django.core.management import execute_from_command_line
