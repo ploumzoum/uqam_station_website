@@ -9,20 +9,18 @@
 {% block content %}
   <h1 class="text-center">- Données -</h1>
   <hr class="my-4">
-  <form action="/your-name/" method="post" class="form">
+  <form action="{% url 'data_form' %}" method="post">
     {% csrf_token %}
-    <div class="form-group">
-      <label for="id_date">{{ form.date.label }}</label>
-      {{ form.date }}
-    </div>
-     <div class="form-group">
-      <label for="id_time">{{ form.time.label }}</label>
-      {{ form.time }}
-    </div>
-    <div class="form-group">
-      <label for="id_data_type">{{ form.data_type.label }}</label>
-      {{ form.data_type|add_class:"custom-select" }}
-    </div>
+    {{ form }}
+{#    <div class="form-group">#}
+{#      <label for="id_date">{{ form.datetime.label }}</label>#}
+{#      {{ form.datetime }}#}
+{#    </div>#}
+{##}
+{#     <div class="form-group">#}
+{#      <label for="id_variables">{{ form.variables.label }}</label>#}
+{#      {{ form.variables }}#}
+{#    </div>#}
     <button class="btn btn-primary" type="submit" >Envoyer</button>
   </form>
 
