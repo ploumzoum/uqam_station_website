@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.http import HttpResponseRedirect
+import csv
+
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
 from controllers.weather_db import get_entry_with_variables
@@ -27,3 +29,19 @@ def data_form(request):
         form = SingleDateForm()
 
     return render(request, 'data_form/data_form.html', {'form': form})
+
+
+class Echo:
+    """An object that implements just the write method of the file-like
+    interface.
+    """
+    def write(self, value):
+        """Write the value by returning it, instead of storing in a buffer."""
+        return value
+
+
+def download_csv(data):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+
+    writer = csv.writer(response)
