@@ -6,9 +6,9 @@ import csv
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
-from controllers.weather_db import get_entry_with_variables
+from controllers.weather_db import get_entry_with_variables, get_all_entries
+from utils.utils import download_csv
 from .forms import SingleDateForm
-
 
 
 # Create your views here.
@@ -21,8 +21,11 @@ def data_form(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
+            all_entries = get_all_entries()
+            count = all_entries.count()
+            some_entries = get_all_entries()[count-100:]
             print(get_entry_with_variables(form.cleaned_data['datetime']).temperature)
-            return HttpResponseRedirect('/donnees/formulaire')
+            return download_csv(some_entries)
 
         # if a GET (or any other method) we'll create a blank form
     else:
@@ -30,18 +33,3 @@ def data_form(request):
 
     return render(request, 'data_form/data_form.html', {'form': form})
 
-
-class Echo:
-    """An object that implements just the write method of the file-like
-    interface.
-    """
-    def write(self, value):
-        """Write the value by returning it, instead of storing in a buffer."""
-        return value
-
-
-def download_csv(data):
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
-
-    writer = csv.writer(response)

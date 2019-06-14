@@ -1,5 +1,11 @@
 # Tiré de https://www.codingforentrepreneurs.com/blog/django-queryset-to-csv-files-datasets/
+import csv
+
 import pandas as pd
+from io import StringIO
+
+from django.db.models import lookups
+from django.http import StreamingHttpResponse
 
 
 def get_model_field_names(model, ignore_fields=['content_object']):
@@ -72,3 +78,21 @@ def convert_to_dataframe(qs, fields=None, index=None):
     values = qs_to_dataset(qs, fields=fields)
     df = pd.DataFrame.from_records(values, columns=lookup_fields, index=index_col)
     return df
+
+
+class Echo:
+    """An object that implements just the write method of the file-like
+    interface.
+    """
+    def write(self, value):
+        """Write the value by returning it, instead of storing in a buffer."""
+        return value
+
+
+def download_csv(queryset):
+    filename = "test.csv"
+    df = convert_to_dataframe(queryset)
+    print(df)
+    response = StreamingHttpResponse(df.to_csv(), content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename="{filename}"'
+    return response
