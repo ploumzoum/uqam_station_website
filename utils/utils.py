@@ -60,7 +60,7 @@ def qs_to_dataset(qs, fields=None):
     return list(qs.values(*lookup_fields))
 
 
-def convert_to_dataframe(qs, fields=None, index=None):
+def convert_to_dataframe(qs, fields=None):
     """
     ::param qs is an QuerySet from Django
     ::fields is a list of field names from the Model of the QuerySet
@@ -70,13 +70,8 @@ def convert_to_dataframe(qs, fields=None, index=None):
     from this data.
     """
     lookup_fields = get_lookup_fields(qs.model, fields=fields)
-    index_col = None
-    if index in lookup_fields:
-        index_col = index
-    elif "id" in lookup_fields:
-        index_col = 'id'
     values = qs_to_dataset(qs, fields=fields)
-    df = pd.DataFrame.from_records(values, columns=lookup_fields, index=index_col)
+    df = pd.DataFrame.from_records(values, columns=lookup_fields)
     return df
 
 
@@ -93,6 +88,6 @@ def download_csv(queryset):
     filename = "test.csv"
     df = convert_to_dataframe(queryset)
     print(df)
-    response = StreamingHttpResponse(df.to_csv(), content_type='text/csv')
+    response = StreamingHttpResponse(df.to_csv(index=False), content_type='text/csv')
     response['Content-Disposition'] = f'attachment; filename="{filename}"'
     return response

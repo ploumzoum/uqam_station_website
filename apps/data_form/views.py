@@ -24,8 +24,8 @@ def data_form(request):
             all_entries = get_all_entries()
             count = all_entries.count()
             some_entries = get_all_entries()[count-100:]
-            print(get_entry_with_variables(form.cleaned_data['datetime']).temperature)
-            return download_csv(some_entries)
+
+            return download_csv(get_entry_with_variables(form.cleaned_data['datetime']))
 
         # if a GET (or any other method) we'll create a blank form
     else:
