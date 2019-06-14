@@ -86,6 +86,7 @@ class Echo:
 
 def download_csv(queryset):
     filename = "test.csv"
+    print(queryset)
     df = convert_to_dataframe(queryset)
     print(df)
     response = StreamingHttpResponse(df.to_csv(index=False), content_type='text/csv')

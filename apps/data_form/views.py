@@ -23,13 +23,13 @@ def data_form(request):
             # redirect to a new URL:
             all_entries = get_all_entries()
             count = all_entries.count()
-            some_entries = get_all_entries()[count-100:]
-
-            return download_csv(get_entry_with_variables(form.cleaned_data['datetime']))
+            some_entries = get_all_entries()[count - 100:]
+            return download_csv(
+                get_entry_with_variables(form.cleaned_data['datetime'], *form.cleaned_data['variables'])
+            )
 
         # if a GET (or any other method) we'll create a blank form
     else:
         form = SingleDateForm()
 
     return render(request, 'data_form/data_form.html', {'form': form})
-
