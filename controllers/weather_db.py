@@ -24,8 +24,8 @@ def get_last_entry():
 
 
 @check_connection
-def get_entry_with_variables(date, *args):
-    return WeatherData.objects.filter(date=date).values(*args)
+def get_entry_with_variables(date, *fields):
+    return WeatherData.objects.filter(date=date).values(*fields)
 
 
 @check_connection

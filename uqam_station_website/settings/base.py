@@ -78,7 +78,6 @@ DATABASES = {
         'NAME': 'BD_labostation__enquete',
         'ENGINE': 'django.db.backends.mysql',
         'HOST': config('DB_HOST'),
-        'PORT': '3307',
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
     }

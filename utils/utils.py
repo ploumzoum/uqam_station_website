@@ -84,10 +84,11 @@ class Echo:
         return value
 
 
-def download_csv(queryset):
+def download_csv(queryset, fields=None):
     filename = "test.csv"
     print(queryset)
-    df = convert_to_dataframe(queryset)
+    print(fields)
+    df = convert_to_dataframe(queryset, fields)
     print(df)
     response = StreamingHttpResponse(df.to_csv(index=False), content_type='text/csv')
     response['Content-Disposition'] = f'attachment; filename="{filename}"'

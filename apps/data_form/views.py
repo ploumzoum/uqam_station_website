@@ -24,8 +24,10 @@ def data_form(request):
             all_entries = get_all_entries()
             count = all_entries.count()
             some_entries = get_all_entries()[count - 100:]
+            print(form.cleaned_data['variables'])
             return download_csv(
-                get_entry_with_variables(form.cleaned_data['datetime'], *form.cleaned_data['variables'])
+                get_entry_with_variables(form.cleaned_data['datetime'], *form.cleaned_data['variables']),
+                form.cleaned_data['variables']
             )
 
         # if a GET (or any other method) we'll create a blank form
