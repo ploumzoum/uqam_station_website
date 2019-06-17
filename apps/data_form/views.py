@@ -5,7 +5,7 @@ import csv
 from datetime import timedelta
 
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from controllers.weather_db import get_one_entry, get_all_entries, get_entries
 from utils.utils import download_csv
@@ -56,12 +56,13 @@ def single_date_form(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return download_csv(
+            download_csv(
                 get_entries(form.cleaned_data['date'], form.cleaned_data['date'] + timedelta(days=1),
                             *form.cleaned_data['variables']),
                 form.filename,
                 form.cleaned_data['variables']
             )
+            return redirect('loading_data')
 
         # if a GET (or any other method) we'll create a blank form
     else:
@@ -102,3 +103,7 @@ def date_range_form(request):
 def date_range_form_preselect(request):
     form = DateRangeForm(PRESELECTED_VARIABLES)
     return render(request, 'data_form/date_range_form.html', {'form': form})
+
+
+def loading_data(request):
+    return render(request, 'data_form/loading_data.html')
