@@ -1,3 +1,5 @@
+from datetime import timedelta, datetime
+
 from bootstrap_datepicker_plus import DatePickerInput, TimePickerInput, DateTimePickerInput
 from django import forms
 
@@ -29,7 +31,8 @@ VARIABLES_CHOICES = [
 ]
 
 
-class SingleDateForm(forms.Form):
+class InstantForm(forms.Form):
+    filename = ''
     datetime = forms.DateTimeField(
         label='Date et heure',
         input_formats=['%d-%m-%Y %H:%M'],
@@ -50,10 +53,81 @@ class SingleDateForm(forms.Form):
         choices=VARIABLES_CHOICES,
     )
 
-    def clean_variables(self):
-        data = self.cleaned_data['variables']
-        return data
-
     def clean_datetime(self):
-        data = self.cleaned_data['datetime']
-        return data
+        datetime = self.cleaned_data['datetime']
+        self.filename = f"{datetime.strftime('%Y-%m-%d_%H:%M')}.csv"
+        return datetime
+
+
+class SingleDateForm(forms.Form):
+    filename = ''
+    date = forms.DateField(
+        label='Date',
+        input_formats=['%d-%m-%Y'],
+        required=True,
+        widget=DatePickerInput(
+            format='%d-%m-%Y',
+            options={
+                'minDate': str(get_first_entry().date),
+                'maxDate': str(get_last_entry().date - timedelta(days=1))
+            }
+        )
+    )
+
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        self.filename = f"{date.strftime('%Y-%m-%d')}.csv"
+        return date
+
+    variables = forms.MultipleChoiceField(
+        label='Variables',
+        required=True,
+        widget=forms.CheckboxSelectMultiple,
+        choices=VARIABLES_CHOICES,
+    )
+
+
+class DateRangeForm(forms.Form):
+    filename = ''
+    start_date = forms.DateField(
+        label='Date de début',
+        input_formats=['%d-%m-%Y'],
+        required=True,
+        widget=DatePickerInput(
+            format='%d-%m-%Y',
+            options={
+                'minDate': str(get_first_entry().date),
+                'maxDate': str(get_last_entry().date)
+            }
+        ).start_of('date_range')
+    )
+
+    end_date = forms.DateField(
+        label='Date de fin',
+        input_formats=['%d-%m-%Y'],
+        required=True,
+        widget=DatePickerInput(
+            format='%d-%m-%Y',
+            options={
+                'minDate': str(get_first_entry().date),
+                'maxDate': str(get_last_entry().date)
+            }
+        ).end_of('date_range')
+    )
+
+    variables = forms.MultipleChoiceField(
+        label='Variables',
+        required=True,
+        widget=forms.CheckboxSelectMultiple,
+        choices=VARIABLES_CHOICES,
+    )
+
+    def clean_start_date(self):
+        date = self.cleaned_data['start_date']
+        self.filename += f"{date.strftime('%Y-%m-%d')} "
+        return date
+
+    def clean_end_date(self):
+        date = self.cleaned_data['end_date']
+        self.filename += f"{date.strftime('%Y-%m-%d')}.csv"
+        return date

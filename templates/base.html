@@ -5,84 +5,87 @@
 <html lang="fr" xml:lang="fr">
 
 <head>
-<title>{{ title }}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
-  {% block head %}
-	{% endblock %}
+    <title>{{ title }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{% sass_src 'scss/uqam_station.scss' %}" rel="stylesheet" type="text/css"/>
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
 <nav class="navbar navbar-dark navbar-expand-lg">
-	<div class="container">
-		<a class="navbar-brand" href="{% url 'home' %}">STATION ESCER UQÀM</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="nav-links">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item ">
-					<a class="nav-link" href="{% url 'home' %}">Accueil</a>
-				</li>
-				<li class="nav-item dropdown">
-					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Visualisation</div>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="{% url 'daily_meteograms' %}">Météogrammes</a></li>
-						<li><a class="dropdown-item" href="{% url 'historic_meteograms' %}">Évolution historique</a></li>
-						<li><a class="dropdown-item" href="{% url 'radial_chart' %}">Graphique radial</a></li>
-						<li><a class="dropdown-item" href="{% url 'windrose' %}">Rose des vents</a></li>
-						<li><a class="dropdown-item" href="{% url 'disdrometer_observations' %}">Disdromètre</a></li>
-						<li><a class="dropdown-item" href="{% url 'weather_radar' %}">Radar météo</a></li>
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Instrumentation</div>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="{% url 'anemometer' %}">Anémomètre à coupelles</a></li>
-						<li><a class="dropdown-item" href="{% url 'weathercock' %}">Girouette</a></li>
-						<li><a class="dropdown-item" href="{% url 'ultrasonic_anemometer' %}">Anémomètre ultrasonique</a></li>
-						<li><a class="dropdown-item" href="{% url 'rain_gauge' %}">Pluviomètre</a></li>
-						<li><a class="dropdown-item" href="{% url 'disdrometer' %}">Disdromètre</a></li>
-						<li><a class="dropdown-item" href="{% url 'radiometers' %}">Radiomètres</a></li>
-						<li><a class="dropdown-item" href="{% url 'temperature_humidity' %}">Température - Humidité</a></li>
-						<li><a class="dropdown-item" href="{% url 'datalogger' %}">Datalogger</a></li>
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<div class="nav-link dropdown-toggle" data-toggle="dropdown">Données</div>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="{% url 'metar' %}">Metar</a></li>
-						<li><a class="dropdown-item" href="{% url 'sounding' %}">Sounding</a></li>
-          <li><a class="dropdown-item" href="{% url 'data_form' %}">Données</a></li>
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<div class="nav-link dropdown-toggle" data-toggle="dropdown">À propos</div>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#" disabled>Historique</a></li>
-						<li><a class="dropdown-item" href="#" disabled>Équipe</a></li>
-					</ul>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">STATION ESCER UQÀM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-links">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'home' %}">Accueil</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">Visualisation</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'daily_meteograms' %}">Météogrammes</a></li>
+                        <li><a class="dropdown-item" href="{% url 'historic_meteograms' %}">Évolution historique</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'radial_chart' %}">Graphique radial</a></li>
+                        <li><a class="dropdown-item" href="{% url 'windrose' %}">Rose des vents</a></li>
+                        <li><a class="dropdown-item" href="{% url 'disdrometer_observations' %}">Disdromètre</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weather_radar' %}">Radar météo</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">Instrumentation</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'anemometer' %}">Anémomètre à coupelles</a></li>
+                        <li><a class="dropdown-item" href="{% url 'weathercock' %}">Girouette</a></li>
+                        <li><a class="dropdown-item" href="{% url 'ultrasonic_anemometer' %}">Anémomètre
+                            ultrasonique</a></li>
+                        <li><a class="dropdown-item" href="{% url 'rain_gauge' %}">Pluviomètre</a></li>
+                        <li><a class="dropdown-item" href="{% url 'disdrometer' %}">Disdromètre</a></li>
+                        <li><a class="dropdown-item" href="{% url 'radiometers' %}">Radiomètres</a></li>
+                        <li><a class="dropdown-item" href="{% url 'temperature_humidity' %}">Température - Humidité</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'datalogger' %}">Datalogger</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">Données</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'metar' %}">Metar</a></li>
+                        <li><a class="dropdown-item" href="{% url 'sounding' %}">Sounding</a></li>
+                        <li><a class="dropdown-item" href="{% url 'single_date_form' %}">Données</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">À propos</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" disabled>Historique</a></li>
+                        <li><a class="dropdown-item" href="#" disabled>Équipe</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 <main class="container">
-	{% block content %}
-	{% endblock %}
+    {% block content %}
+    {% endblock %}
 </main>
 <footer>
-		<h3>STATION ESCER UQÀM</h3>
-		<div class="copyright"> Copyright @ {% now "Y" %}.</div>
+    <h3>STATION ESCER UQÀM</h3>
+    <div class="copyright"> Copyright @ {% now "Y" %}.</div>
 </footer>
 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-				crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
 {% block scripts %}
 {% endblock %}
