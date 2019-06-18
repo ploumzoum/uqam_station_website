@@ -7038,7 +7038,8 @@ nav {
 .dropdown-menu {
   background-color: #176087;
   border-radius: 0;
-  border: 0; }
+  border: 0;
+  margin: 0; }
   .dropdown-menu .dropdown-item {
     color: #f7f7f7;
     font-weight: 500; }
