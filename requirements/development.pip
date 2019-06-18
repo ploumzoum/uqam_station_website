@@ -1,6 +1,7 @@
 Django==2.2
 django-appconf==1.0.3
 django-compressor==2.2
+django-email-obfuscator==0.1.5
 django-sass-processor==0.7.3
 libsass==0.18.0
 mysqlclient==1.4.2.post1

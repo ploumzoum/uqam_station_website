@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'bootstrap_modal_forms',
     'bootstrap_datepicker_plus',
     'widget_tweaks',
+    'email_obfuscator',
     # Models
     'models.apps.ModelsConfig',
 

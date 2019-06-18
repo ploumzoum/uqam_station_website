@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load email_obfuscator %}
+{% block head %}
+{% endblock %}
+{% block content %}
+
+    <h1 class="text-center">- Historique -</h1>
+    <hr class="my-4">
+    <div class="text-center mb-5">
+        <img src="/media/images/station.png" alt="Station UQAM">
+    </div>
+
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <th scope="row">Professeurs responsables</th>
+            <td>Julie Thériault<br>Philippe Gachon</td>
+            <td>{{ 'theriault.julie@uqam.ca'|obfuscate_mailto }}<br>{{ 'gachon.philippe@uqam.ca'|obfuscate_mailto }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Animatrice pédagogique</th>
+            <td>Leticia Hernandez Diaz</td>
+            <td>{{ 'hernandez_diaz.leticia@uqam.ca'|obfuscate_mailto }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Conception et développement</th>
+            <td>Guillaume Dueymes</td>
+            <td>{{ 'dueymes.guillaume@uqam.ca'|obfuscate_mailto }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
