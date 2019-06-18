@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'weather_radar.apps.WeatherRadarConfig',
     'instrumentation.apps.InstrumentationConfig',
     'data_maps.apps.DataMapsConfig',
-    'data_form.apps.DataFormConfig'
+    'data_form.apps.DataFormConfig',
+    'about.apps.AboutConfig'
 ]
 
 ROOT_URLCONF = 'uqam_station_website.urls'

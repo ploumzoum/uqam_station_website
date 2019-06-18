@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+{% block head %}
+    <link href="{% sass_src 'about/scss/history.scss' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block content %}
+    <h1 class="text-center">- Historique -</h1>
+    <hr class="my-4">
+    <div class="text-center">
+        <img src="/media/images/station.png" alt="Station UQAM">
+    </div>
+    <hr class="my-4">
+    <ul class="timeline">
+        <li>
+            <div class="timeline-badge"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="timeline-panel-container">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <p class="text-muted">
+
+                            <small class="glyphicon ">  <i class="fas fa-clock fa-md mr-2"></i>2017-2018</small>
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Développement du site web en Django (Guillaume Dueymes et François-Xavier
+                            Dueymes)</p>
+                        <p>Création du formulaire d'extraction de données (Stage polytechnique François-Xavier
+                            Dueymes) </p>
+                        <p>Mise en ligne du météogramme (Guillaume Dueymes)</p>
+                        <p>Mise en ligne du graphique radial (Guillaume Dueymes)</p>
+                        <p>Mise en ligne de la rose des vents (Guillaume Dueymes)</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="timeline-panel-container-inverted">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <p class="text-muted">
+
+                            <small class="glyphicon">  <i class="fas fa-clock fa-md mr-2"></i>2004-2005</small>
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Préparation de la plateforme pour l'installation du "Electric Field Mill II" et du
+                            panneau solaire.(J-E Lavallée et Jean Chevalier)</p>
+                        <p>Achat de l'instrument de mesure du champ electrostatique de
+                            l'atmosphère (Electric Field Mill II de Vaisala) (J-E Lavallée)</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="timeline-panel-container">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <p class="text-muted">
+
+                            <small class="glyphicon">  <i class="fas fa-clock fa-md mr-2"></i>2003-2004</small>
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Instrumentation de la tour (Pierre Riopelle,Jean Chevalier et J-E Lavallée)</p>
+                        <p>Demande d'investissement pour l'achat d'un instrument de mesure du champ électrique
+                            atmosphérique.( Pierre Riopelle )</p>
+
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="timeline-badge"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="timeline-panel-container-inverted">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <p class="text-muted">
+
+                            <small class="glyphicon">  <i class="fas fa-clock fa-md mr-2"></i>2002-2003</small>
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Calibration des instruments en laboratoire (Gill Royer et Jean-Etienne Lavallée
+                            supervisée par Pierre Riopelle)</p>
+                        <p>Achat des instruments de mesure des principales variables météorologiques (Pierre
+                            Riopelle)</p>
+                        <ul>
+                            <li>Vitesse et direction du vent</li>
+                            <li>Intensité du rayonnement solaire et terrestre</li>
+                            <li>Pression atmosphérique</li>
+                            <li>Humidité relative</li>
+                            <li>Température</li>
+                            <li>Taux et accumulation de neige et de pluie</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="timeline-badge"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="timeline-panel-container">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <p class="text-muted">
+
+                            <small class="glyphicon">  <i class="fas fa-clock fa-md mr-2"></i>2001-2002</small>
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Demande d'investissement pour la réalisation de la station (Pierre Riopelle)</p>
+
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endblock %}

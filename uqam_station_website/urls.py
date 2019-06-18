@@ -28,5 +28,6 @@ urlpatterns = [
     path('visualisation/radar-meteo', include('weather_radar.urls')),
     path('instrumentation/', include('instrumentation.urls')),
     path('donnees/', include('data_maps.urls')),
-    path('donnees/', include('data_form.urls'))
+    path('donnees/', include('data_form.urls')),
+    path('a-propos/', include('about.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
