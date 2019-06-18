@@ -56,13 +56,12 @@ def single_date_form(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            download_csv(
+            return download_csv(
                 get_entries(form.cleaned_data['date'], form.cleaned_data['date'] + timedelta(days=1),
                             *form.cleaned_data['variables']),
                 form.filename,
                 form.cleaned_data['variables']
             )
-            return redirect('loading_data')
 
         # if a GET (or any other method) we'll create a blank form
     else:
