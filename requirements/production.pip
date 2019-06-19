@@ -1,9 +1,14 @@
 Django==2.2
 django-appconf==1.0.3
 django-compressor==2.2
+django-email-obfuscator==0.1.5
 django-sass-processor==0.7.3
 python-decouple==3.1
 libsass==0.18.0
-django-bootstrap4==0.0.8
-django-leaflet==0.24.0
+mysqlclient==1.4.2.post1
+sqlparse==0.3.0
+django-bootstrap-datepicker-plus==3.0.5
+wrapt==1.11.1
+pandas==0.24.2
+whitenoise
 gunicorn

@@ -85,7 +85,7 @@ var options1 = {
       enabled: false
   }
  };
-    $.get('/media/data/resultDoppler.csv', function(data) {
+    $.get('/static/data/resultDoppler.csv', function(data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];
@@ -187,7 +187,7 @@ var options2 = {
   }
  };
 
-    $.get('/media/data/resultreflectivity_2D.csv', function(data) {
+    $.get('/static/data/resultreflectivity_2D.csv', function(data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];

@@ -1,4 +1,4 @@
-"""uqam_station_website URL Configuration
+"""uqam_station_website.nginx URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -30,4 +30,4 @@ urlpatterns = [
     path('donnees/', include('data_maps.urls')),
     path('donnees/', include('data_form.urls')),
     path('a-propos/', include('about.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

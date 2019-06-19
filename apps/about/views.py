@@ -8,3 +8,7 @@ def history(request):
 
 def team(request):
     return render(request, 'about/team.html', {'title': 'Équipe - Station UQÀM'})
+
+
+def contact(request):
+    return render(request, 'about/team.html', {'title': 'Contact - Station UQÀM'})

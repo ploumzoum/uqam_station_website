@@ -16,9 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
-    'bootstrap_modal_forms',
     'bootstrap_datepicker_plus',
-    'widget_tweaks',
     'email_obfuscator',
     # Models
     'models.apps.ModelsConfig',
@@ -135,9 +133,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(ROOT_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
-
-MEDIA_URL = '/media/'
 
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(ROOT_DIR, 'static'),

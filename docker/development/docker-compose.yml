@@ -3,7 +3,7 @@ version: '3.5'
 services:
 
   station_django:
-    container_name: uqam_station_website
+    container_name: uqam_station_website.nginx
     build:
       context: ../
       dockerfile: docker/Dockerfile

@@ -87,7 +87,7 @@ $(function () {
       enabled: false
     }
   };
-  $.get('/media/data/Timeserie_Diametre.csv', function (data) {
+  $.get('/static/data/Timeserie_Diametre.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];
@@ -188,7 +188,7 @@ $(function () {
     }
   };
 
-  $.get('/media/data/Timeserie_Vitesse.csv', function (data) {
+  $.get('/static/data/Timeserie_Vitesse.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];

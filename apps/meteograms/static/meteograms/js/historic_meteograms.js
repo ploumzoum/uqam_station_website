@@ -123,7 +123,7 @@ $(function () {
     },
     //disable the nav export button
   };
-  $.get('/media/data/UQAM_DATA_STATION_2019.csv', function (data) {
+  $.get('/static/data/UQAM_DATA_STATION_2019.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
     i
@@ -235,7 +235,7 @@ $(function () {
       turboThreshold: Number.MAX_VALUE // #3404, remove after 4.0.5 release
     }]
   };
-  $.get('/media/data/Heat_temp.csv', function (data) {
+  $.get('/static/data/Heat_temp.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
