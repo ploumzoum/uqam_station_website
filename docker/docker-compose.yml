@@ -2,8 +2,8 @@ version: '3.5'
 
 services:
 
-  station_django:
-    container_name: uqam_station_website
+  uqam-station:
+    container_name: uqam-station
     build:
       context: ../
       dockerfile: docker/Dockerfile
@@ -11,6 +11,9 @@ services:
     networks:
       riisqdocker_default:
         ipv4_address: 172.23.0.6
+
+    volumes:
+      - ../:/usr/uqam_station_website
 
 networks:
   riisqdocker_default:
