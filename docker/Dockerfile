@@ -1,5 +1,5 @@
 # base image
-FROM python:3.6 as builder
+FROM python:3.6
 
 #RUN apt-get update
 #RUN apt-get install -y software-properties-common vim
