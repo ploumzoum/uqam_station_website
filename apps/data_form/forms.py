@@ -133,13 +133,13 @@ class DateRangeForm(forms.Form):
     def clean_end_date(self):
         date = self.cleaned_data['end_date']
         start_date = self.cleaned_data['start_date']
-        if (date - start_date).days > 60:
-            raise forms.ValidationError('Intervalle de date trop long (>2 mois)')
+        if (date - start_date).days > 31:
+            raise forms.ValidationError('Intervalle de date trop long (>1 mois)')
         self.filename += f"{date.strftime('%Y-%m-%d')}.csv"
         return date
 
-    def clean_variables(self):
-        values = self.cleaned_data['variables']
-        if len(values) > 3:
-            raise forms.ValidationError('Vous ne pouvez pas choisir plus de 3 variables.')
-        return values
+    # def clean_variables(self):
+    #     values = self.cleaned_data['variables']
+    #     if len(values) > 3:
+    #         raise forms.ValidationError('Vous ne pouvez pas choisir plus de 3 variables.')
+    #     return values
