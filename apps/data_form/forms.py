@@ -97,7 +97,8 @@ class DateRangeForm(forms.Form):
             format='%d-%m-%Y',
             options={
                 'minDate': str(get_first_entry().date),
-                'maxDate': str(get_last_entry().date)
+                'maxDate': str(get_last_entry().date),
+                'defaultDate': str(get_first_entry().date)
             }
         ).start_of('date_range')
     )
@@ -110,7 +111,9 @@ class DateRangeForm(forms.Form):
             format='%d-%m-%Y',
             options={
                 'minDate': str(get_first_entry().date),
-                'maxDate': str(get_last_entry().date)
+                'maxDate': str(get_last_entry().date),
+                'defaultDate': str(get_last_entry().date)
+
             }
         ).end_of('date_range')
     )
