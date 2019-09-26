@@ -11,9 +11,9 @@ services:
     volumes:
       - '../:/usr/uqam-station-website'
     networks:
-      riisqdocker_default:
-        ipv4_address: 172.23.0.6
+      sitewebrecherche:
+        ipv4_address: 172.18.0.7
 
 networks:
-  riisqdocker_default:
+  sitewebrecherche:
     external: true
