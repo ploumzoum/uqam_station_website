@@ -87,7 +87,7 @@ $(function () {
       enabled: false
     }
   };
-  $.get('/static/data/Timeserie_Diametre.csv', function (data) {
+  $.get('http://resources.station.escer.uqam.ca/data/Timeserie_Diametre.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];
@@ -188,7 +188,7 @@ $(function () {
     }
   };
 
-  $.get('/static/data/Timeserie_Vitesse.csv', function (data) {
+  $.get('http://resources.station.escer.uqam.ca/data/Timeserie_Vitesse.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];

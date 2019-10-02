@@ -5,7 +5,7 @@ now = datetime.datetime.now()
 register = template.Library()
 @register.filter(name='get_key')
 def get_key(value, arg):
-    return value[arg]
+    return value[arg][0]
 
 
 @register.filter(name='get_datetime')

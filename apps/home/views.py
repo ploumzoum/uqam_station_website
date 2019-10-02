@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import os
 from django.conf import settings
 from django.shortcuts import render
+from utils.urls import RESOURCES_FILES_URL
+import pandas as pd
 import csv
 
 
 # Create your views here.
 def index(request):
-    with open(os.path.join(settings.ROOT_DIR, 'staticfiles/data/UQAM_DATA_STATION_last.csv')) as last_entry:
-        csv_reader = csv.DictReader(last_entry)
-        dataset = next(csv_reader)
-        return render(request, 'home/home.html', {'title': 'Accueil - Station UQÀM',
-                                                  'dataset': dataset})
+    df = pd.read_csv(f'{RESOURCES_FILES_URL}/data/UQAM_DATA_STATION_last.csv')
+    return render(request, 'home/home.html', {'title': 'Accueil - Station UQÀM',
+                                              'dataset': df.to_dict()})

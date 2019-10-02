@@ -19,15 +19,15 @@
   <hr class="my-4">
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Température:</p></div>
-    <div class="col-sm-4">{{ dataset.temperature }} °C</div>
+    <div class="col-sm-4">{{ dataset.temperature.0 }} °C</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Température ressentie:</p></div>
-    <div class="col-sm-4">{{ dataset.chill }} °C</div>
+    <div class="col-sm-4">{{ dataset.chill.0 }} °C</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Date:</p></div>
-    <div class="col-sm-4">{{ dataset.Temps | get_datetime }}</div>
+    <div class="col-sm-4">{{ dataset.Temps.0 | get_datetime }}</div>
   </div>
   <hr class="my-4">
   <div class="row">
@@ -40,7 +40,7 @@
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Pression au niveau de la mer:</p></div>
-    <div class="col-sm-4">{{ dataset.slp }} hPa</div>
+    <div class="col-sm-4">{{ dataset.slp.0 }} hPa</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Température du point de rosée:</p></div>
@@ -48,31 +48,31 @@
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Refroidissement éolien:</p></div>
-    <div class="col-sm-4">{{ dataset.chill }} °C</div>
+    <div class="col-sm-4">{{ dataset.chill.0 }} °C</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Humidité:</p></div>
-    <div class="col-sm-4">{{ dataset.humidite }} %</div>
+    <div class="col-sm-4">{{ dataset.humidite.0 }} %</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Direction du vent:</p></div>
-    <div class="col-sm-4">{{ dataset.dir_wind }} °</div>
+    <div class="col-sm-4">{{ dataset.dir_wind.0 }} °</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Module du vent:</p></div>
-    <div class="col-sm-4">{{ dataset.mod_wind }} km/h</div>
+    <div class="col-sm-4">{{ dataset.mod_wind.0 }} km/h</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les dernières 24h:</p></div>
-    <div class="col-sm-4">{{ dataset.precip1 }} mm</div>
+    <div class="col-sm-4">{{ dataset.precip1.0 }} mm</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 3 derniers jours: </p></div>
-    <div class="col-sm-4">{{ dataset.precip2 }} mm</div>
+    <div class="col-sm-4">{{ dataset.precip2.0 }} mm</div>
   </div>
   <div class="row">
     <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 7 derniers jours:</p></div>
-    <div class="col-sm-4 mb-5">{{ dataset.precip3 }} mm</div>
+    <div class="col-sm-4 mb-5">{{ dataset.precip3.0 }} mm</div>
   </div>
 {% endblock %}
 {% block scripts %}

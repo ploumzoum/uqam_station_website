@@ -2,24 +2,26 @@
 {% load static %}
 {% block content %}
 
-  <h1 class="text-center"> - Historique des quotidiennes de précipitations et de température de la station - </h1>
-  <hr class="my-4">
-  <div id="graphdiv" class="graph"></div>
-  <div id="graphdiv2" class="graph"></div>
-  <p><b>Réalisation: Guillaume Dueymes</b></p>
+    <h1 class="text-center"> - Historique des quotidiennes de précipitations et de température de la station - </h1>
+    <hr class="my-4">
+    <div id="graphdiv" class="graph"></div>
+    <div id="graphdiv2" class="graph"></div>
+    <p><b>Réalisation: Guillaume Dueymes</b></p>
+
 {% endblock %}
 {% block scripts %}
-  <!-- Highchart -->
-  <script src="https://code.highcharts.com/stock/highstock.js"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
-  <script src="https://code.highcharts.com/modules/boost.js"></script>
-  <script src="{% static 'meteograms/js/historic_meteograms.js' %}"></script>
+
+    <!-- Highchart -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
+    <script src="{% static 'meteograms/js/historic_meteograms.js' %}"></script>
 
 {% endblock %}

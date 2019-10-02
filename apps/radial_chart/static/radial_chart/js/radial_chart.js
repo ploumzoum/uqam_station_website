@@ -38,7 +38,7 @@ var drawRadial = function (chart, cl, data, low, high) {
 
 svg.call(tip);
 
-d3.json('/static/data/UQAM_radial.json', function (err, json) {
+d3.json('http://resources.station.escer.uqam.ca/data/UQAM_radial.json', function (err, json) {
   angleScale.domain([0, json.values.length - 1]);
 
   var min = d3.min(json.values, d => parseInt(d.recLow)),

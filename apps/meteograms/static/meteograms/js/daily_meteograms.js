@@ -1,5 +1,11 @@
 $(function () {
-
+  Papa.parse("http://resources.station.escer.uqam/data/UQAM_DATA_STATION.csv",
+      {
+        download: true,
+        complete: (data) => {
+          console.log(data);
+        }
+      });
   var today = new Date();
   today.setMinutes(0);
   var yesterday = today.setDate(today.getDate() - 1) - today.getTimezoneOffset() * 60000;
@@ -140,7 +146,7 @@ $(function () {
       }
     }
   };
-  jQuery.get('/static/data/UQAM_DATA_STATION.csv', function (data) {
+  jQuery.get('/usr/share/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -280,7 +286,7 @@ $(function () {
       }
     }
   };
-  jQuery.get('/static/data/UQAM_DATA_STATION.csv', function (data) {
+  jQuery.get('/usr/share/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -398,7 +404,7 @@ $(function () {
       }
     }
   };
-  $.get('/static/data/UQAM_DATA_STATION.csv', function (data) {
+  $.get('/usr/share/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -505,7 +511,7 @@ $(function () {
 
     }
   };
-  $.get('/static/data/UQAM_DATA_STATION.csv', function (data) {
+  $.get('/usr/share/data/UQAM_DATA_STATION.csv', function (data) {
     // Split the lines
     var lines = data.split('\n');
 

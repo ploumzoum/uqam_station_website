@@ -101,7 +101,7 @@ var options1 = {
   }
 
 };
-$.get('/static/data/wind_rose_data2014-01.csv', function(data) {
+$.get('http://resources.station.escer.uqam.ca/data/wind_rose_data2014-01.csv', function(data) {
     // Split the lines
     var lines = data.split('\n');
 
@@ -282,7 +282,7 @@ var options1 = {
   }
 
 };
-$.get('/static/data/wind_rose_data'+period+'-'+month+'.csv', function(data) {
+$.get('http://resources.station.escer.uqam.ca/data/wind_rose_data'+period+'-'+month+'.csv', function(data) {
     // Split the lines
     var lines = data.split('\n');
 

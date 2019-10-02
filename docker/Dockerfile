@@ -24,16 +24,15 @@ RUN python manage.py migrate
  # Collect static files
 RUN python manage.py collectstatic --noinput
 
-
-
-
-
 #Add apps directory to python path
 ENV PYTHONPATH "${PYTHONPATH}:/usr/uqam_station_website/apps"
+
 # Create log files
-#RUN mkdir /usr/uqam_station_website.nginx/logs
-#RUN touch /usr/uqam_station_website.nginx/logs/access.log
-#RUN touch /usr/uqam_station_website.nginx/logs/error.log
+#RUN mkdir /usr/share/logs
+#RUN touch /usr/share/logs/access.log
+#RUN touch /usr/share/logs/error.log
+#RUN chmod 777 /usr/share/logs/access.log
+#RUN chmod 777 /usr/share/logs/error.log
 
 # expose the port 80
 EXPOSE 80

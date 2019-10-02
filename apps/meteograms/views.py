@@ -6,6 +6,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def daily(request):
+
     return render(request, 'meteograms/daily_meteograms.html', {'title': 'Météogrammes du jour - Station UQÀM'})
 
 
