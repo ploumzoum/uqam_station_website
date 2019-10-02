@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-  <h1 class="text-center"> - Météogrammes des dernières 24 heures - </h1>
-  <hr class="my-4">
-  <p class="lead text-center">(Dernière mise à jour: {% now  "j/m/Y à H" %}h - UTC)</p>
-  <div id="graphdiv" class="graph"></div>
-  <div id="graphdiv2" class="graph"></div>
-  <div id="graphdiv3" class="graph"></div>
-  <div id="graphdiv4" class="graph"></div>
-  <p><b>Réalisation: Guillaume Dueymes</b></p>
+    <h1 class="text-center"> - Météogrammes des dernières 24 heures - </h1>
+    <hr class="my-4">
+    <p class="lead text-center">(Dernière mise à jour: {% now  "j/m/Y à H" %}h - UTC)</p>
+    <div id="graphdiv" class="graph"></div>
+    <div id="graphdiv2" class="graph"></div>
+    <div id="graphdiv3" class="graph"></div>
+    <div id="graphdiv4" class="graph"></div>
+    <p><b>Réalisation: Guillaume Dueymes</b></p>
 {% endblock %}
 {% block scripts %}
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/windbarb.js"></script>
-  <script src="{% static 'meteograms/js/daily_meteograms.js' %}"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/windbarb.js"></script>
+    <script src="{% static 'meteograms/js/daily_meteograms.js' %}"></script>
 {% endblock %}
 
