@@ -4,11 +4,11 @@ services:
 
   uqam-station-prod:
     container_name: uqam-station-prod
+    volumes:
+      - ../../:/var/www/station.escer.uqam.ca
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
-    volumes:
-      - ../../:/var/www/station.escer.uqam.ca
     networks:
       sitewebrecherche:
         ipv4_address: 172.20.0.7
