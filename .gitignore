@@ -4,5 +4,4 @@
 **/ENV
 **/shared
 **/resources
-**/staticfiles/*
 *.pyc

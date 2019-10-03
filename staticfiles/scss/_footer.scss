@@ -1,0 +1,12 @@
+footer {
+  background-color: $navbar-background-color;
+  color: $white;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: auto;
+  >.copyright {
+    align-self: center;
+  }
+}
