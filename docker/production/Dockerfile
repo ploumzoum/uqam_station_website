@@ -12,7 +12,6 @@ WORKDIR $WORKPATH
 # Add the project folder to Docker container
 ADD . .
 
-RUN mkdir "${WORKPATH}/media"
 ENV PYTHONPATH "${PYTHONPATH}:${WORKPATH}"
 
 

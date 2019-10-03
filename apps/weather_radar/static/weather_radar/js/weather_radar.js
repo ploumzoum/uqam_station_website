@@ -85,7 +85,7 @@ var options1 = {
       enabled: false
   }
  };
-    $.get('http://resources.station.escer.uqam.ca/data/resultDoppler.csv', function(data) {
+    $.get(media_url + 'data/resultDoppler.csv', function(data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];
@@ -187,7 +187,7 @@ var options2 = {
   }
  };
 
-    $.get('http://resources.station.escer.uqam.ca/data/resultreflectivity_2D.csv', function(data) {
+    $.get(media_url + 'data/resultreflectivity_2D.csv', function(data) {
     // Split the lines
     var lines = data.split('\n');
     var fourCol = lines[1].split(",")[4];

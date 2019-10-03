@@ -1,6 +1,10 @@
 server {
     server_name station.escer.riisq.ca www.station.escer.riisq.ca;
     location / {
-        proxy_pass http://172.23.0.6;
+        proxy_pass http://172.18.0.7;
+    }
+
+    location /media/ {
+        alias /var/www/html/station.escer.uqam.ca/resources
     }
 }

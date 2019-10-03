@@ -1,4 +1,4 @@
-$.getJSON('http://resources.station.escer.uqam.ca/data/SOUNDING.json', (ECmarkers) => {
+$.getJSON(`${media_url}data/SOUNDING.json`, (ECmarkers) => {
   let map = L.map('map', {
     center: [65.0, -90.0],
     minZoom: 2,
