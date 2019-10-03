@@ -1,7 +1,7 @@
 server {
     server_name station.escer.uqam.ca www.station.escer.uqam.ca;
     location / {
-        proxy_pass http://172.20.0.7;
+        proxy_pass http://172.18.0.7;
     }
 
     location /media/ {
