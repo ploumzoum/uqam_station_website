@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
-WSGI_APPLICATION = 'uqam_station_website.wsgi.application'
+WSGI_APPLICATION = 'uqamhttp://172.23.0.7/_station_website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -133,7 +133,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(ROOT_DIR, 'staticfiles')
-
+MEDIA_ROOT = "/var/www/station.escer.uqam.ca/media/"
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(ROOT_DIR, 'static'),
 ]

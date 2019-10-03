@@ -2,7 +2,7 @@ from .base import *
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '172.23.0.7',
+    '172.20.0.7',
     '172.18.0.7'
 ]
 

@@ -7,14 +7,10 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile
-
-    volumes:
-      - '../:/usr/uqam-station-website'
-      - '../shared:/usr/share'
     networks:
-      riisqdocker_default:
-        ipv4_address: 172.23.0.7
+      sitewebrecherche:
+        ipv4_address: 172.20.0.7
 
 networks:
-  riisqdocker_default:
+  sitewebrecherche:
     external: true
