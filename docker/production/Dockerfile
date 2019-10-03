@@ -39,4 +39,4 @@ ENV PYTHONPATH "${PYTHONPATH}:${WORKPATH}/apps"
 # expose the port 80
 EXPOSE 80
 
-CMD [ "gunicorn", "-c", "config/gunicorn/gunicorn.conf", "--env", "DJANGO_SETTINGS_MODULE=uqam_station_website.settings.development", "uqam_station_website.wsgi" ]
+CMD [ "gunicorn", "-c", "config/gunicorn/gunicorn.conf", "--env", "DJANGO_SETTINGS_MODULE=uqam_station_website.settings.production", "uqam_station_website.wsgi" ]
