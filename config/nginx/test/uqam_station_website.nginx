@@ -1,6 +1,0 @@
-server {
-    server_name station.escer.riisq.test www.station.escer.riisq.test;
-    location / {
-        proxy_pass http://172.23.0.6;
-    }
-}

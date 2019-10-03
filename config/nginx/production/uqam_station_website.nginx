@@ -1,10 +1,14 @@
 server {
-    server_name station.escer.uqam.ca www.station.escer.uqam.ca;
+    server_name station.escer.uqam.test www.station.escer.uqam.test;
     location / {
-        proxy_pass http://172.18.0.7;
+        proxy_pass http://172.20.0.7;
     }
 
     location /media/ {
-        alias /var/www/html/station.escer.uqam.ca/resources;
+        alias /home/xavier/PycharmProjects/uqam_station_website/resources/;
+    }
+
+    location /static/ {
+        alias /home/xavier/PycharmProjects/uqam_station_website/staticfiles/;
     }
 }
