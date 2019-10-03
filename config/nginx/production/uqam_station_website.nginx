@@ -5,6 +5,6 @@ server {
     }
 
     location /media/ {
-        alias /var/www/html/station.escer.uqam.ca/resources
+        alias /var/www/html/station.escer.uqam.ca/resources;
     }
 }

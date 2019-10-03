@@ -7,11 +7,9 @@ services:
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
-    volumes:
-      - ../../resources:/var/www/station.escer.uqam.ca/media
     networks:
       sitewebrecherche:
-        ipv4_address: 172.20.0.7
+        ipv4_address: 172.18.0.7
 
 networks:
   sitewebrecherche:
