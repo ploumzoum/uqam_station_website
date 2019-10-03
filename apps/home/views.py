@@ -10,6 +10,6 @@ import csv
 
 # Create your views here.
 def index(request):
-    df = pd.read_csv('http://resources.station.escer.uqam.ca/data/UQAM_DATA_STATION_last.csv')
+    df = pd.read_csv(f'{settings.MEDIA_URL}data/UQAM_DATA_STATION_last.csv')
     return render(request, 'home/home.html', {'title': 'Accueil - Station UQÀM',
                                               'dataset': df.to_dict()})
