@@ -9,7 +9,9 @@ services:
       dockerfile: docker/production/Dockerfile
     volumes:
       - static_volume:/var/www/station.escer.uqam.ca/staticfiles
-    command: gunicorn -c config/gunicorn/gunicorn.production.conf --env DJANGO_SETTINGS_MODULE=uqam_station_website.settings.production --bind 0.0.0.0:8000 uqam_station_website.wsgi
+    command: gunicorn -c config/gunicorn/gunicorn.production.conf
+      --env DJANGO_SETTINGS_MODULE=uqam_station_website.settings.production
+      --bind 0.0.0.0:8000 uqam_station_website.wsgi
     expose:
       - 8000
     networks:
@@ -18,6 +20,7 @@ services:
 
 
   nginx:
+    container_name: nginx-uqam-station
     depends_on:
       - web
     build:

@@ -1,84 +1,84 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% load home_extras %}
 {% load sass_tags %}
 
 {% block head %}
-  <link href="{% sass_src 'home/scss/home.scss' %}" rel="stylesheet" type="text/css"/>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
+    <link href="{% sass_src 'home/scss/home.scss' %}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
 
 
 {% endblock %}
 {% block content %}
-  <h1 class="display-4 mb-5 text-center">Station météorologique de l'UQÀM</h1>
-  <div id="map"></div>
-  <h1 class=" mt-4 ">Données instantanées</h1>
-  <hr class="my-4">
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Température:</p></div>
-    <div class="col-sm-4">{{ dataset.temperature.0 }} °C</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Température ressentie:</p></div>
-    <div class="col-sm-4">{{ dataset.chill.0 }} °C</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Date:</p></div>
-    <div class="col-sm-4">{{ dataset.Temps.0 | get_datetime }}</div>
-  </div>
-  <hr class="my-4">
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Élévation:</p></div>
-    <div class="col-sm-4">80 m</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Pression:</p></div>
-    <div class="col-sm-4">{{ dataset | get_key:'pressure station' }} hPa</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Pression au niveau de la mer:</p></div>
-    <div class="col-sm-4">{{ dataset.slp.0 }} hPa</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Température du point de rosée:</p></div>
-    <div class="col-sm-4">{{ dataset | get_key:'dew point' }} °C</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Refroidissement éolien:</p></div>
-    <div class="col-sm-4">{{ dataset.chill.0 }} °C</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Humidité:</p></div>
-    <div class="col-sm-4">{{ dataset.humidite.0 }} %</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Direction du vent:</p></div>
-    <div class="col-sm-4">{{ dataset.dir_wind.0 }} °</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Module du vent:</p></div>
-    <div class="col-sm-4">{{ dataset.mod_wind.0 }} km/h</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les dernières 24h:</p></div>
-    <div class="col-sm-4">{{ dataset.precip1.0 }} mm</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 3 derniers jours: </p></div>
-    <div class="col-sm-4">{{ dataset.precip2.0 }} mm</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 7 derniers jours:</p></div>
-    <div class="col-sm-4 mb-5">{{ dataset.precip3.0 }} mm</div>
-  </div>
+    <h1 class="display-4 mb-5 text-center">Station météorologique de l'UQÀM</h1>
+    <div id="map"></div>
+    <h1 class=" mt-4 ">Données instantanées</h1>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Température:</p></div>
+        <div class="col-sm-4" id="temperature"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Température ressentie:</p></div>
+        <div class="col-sm-4" id="chillTemperature"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Date:</p></div>
+        <div class="col-sm-4" id="date"></div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Élévation:</p></div>
+        <div class="col-sm-4">80 m</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Pression:</p></div>
+        <div class="col-sm-4" id="stationPressure"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Pression au niveau de la mer:</p></div>
+        <div class="col-sm-4" id="seaLevelPressure"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Température du point de rosée:</p></div>
+        <div class="col-sm-4" id="dewPoint"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Refroidissement éolien:</p></div>
+        <div class="col-sm-4" id="chill"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Humidité:</p></div>
+        <div class="col-sm-4" id="humidity"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Direction du vent:</p></div>
+        <div class="col-sm-4" id="windDirection"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Module du vent:</p></div>
+        <div class="col-sm-4" id="windSpeed"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les dernières 24h:</p></div>
+        <div class="col-sm-4" id="precipitation"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 3 derniers jours: </p></div>
+        <div class="col-sm-4" id="stackedPrecipitation"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><p class="display-data">Précipitation cumulée sur les 7 derniers jours:</p></div>
+        <div class="col-sm-4 mb-5" id="weeklyStackedPrecipitation"></div>
+    </div>
 {% endblock %}
 {% block scripts %}
-  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-  crossorigin=""></script>
-  <script src="{% static 'home/js/home.js' %}"></script>
+    <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+            crossorigin=""></script>
+    <script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}
 

@@ -255,10 +255,6 @@ var options2 = {
         }
     }
 };
-jQuery.get(media_url + 'data/UQAM_DATA_STATION.csv', function (data) {
-    // Split the lines
-
-});
 
 
 ///Panneau sur pression de surface
@@ -361,13 +357,7 @@ var options3 = {
         }
     }
 };
-$.get(media_url + 'data/UQAM_DATA_STATION.csv', function (data) {
-    // Split the lines
-    var lines = data.split('\n');
 
-    // Push column data into data list
-
-});
 
 
 ///Panneau sur la direction du vent et le module
@@ -461,12 +451,7 @@ var options4 = {
 
     }
 };
-$.get(media_url + 'data/UQAM_DATA_STATION.csv', function (data) {
-    // Split the lines
-    var lines = data.split('\n');
 
-
-});
 jQuery.get(`${media_url}data/UQAM_DATA_STATION.csv`, function (data) {
     // Split the lines
     var lines = data.split('\n');
@@ -527,20 +512,3 @@ jQuery.get(`${media_url}data/UQAM_DATA_STATION.csv`, function (data) {
     // Create the chart
     chart = new Highcharts.Chart(options4);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

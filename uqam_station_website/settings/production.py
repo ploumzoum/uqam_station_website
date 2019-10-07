@@ -1,5 +1,5 @@
 from .base import *
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '172.20.0.7',

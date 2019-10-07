@@ -1,7 +1,6 @@
 version: '3.5'
 
 services:
-
   uqam-station-dev:
     container_name: uqam-station-dev
     build:
