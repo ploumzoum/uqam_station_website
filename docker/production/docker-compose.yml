@@ -4,11 +4,11 @@ services:
 
   web:
     container_name: uqam-station-prod
-    volumes:
-      - ../../:/var/www/station.escer.uqam.ca
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
+    volumes:
+      - static_volume:/var/www/station.escer.uqam.ca/staticfiles
     command: gunicorn -c config/gunicorn/gunicorn.production.conf --env DJANGO_SETTINGS_MODULE=uqam_station_website.settings.production --bind 0.0.0.0:8000 uqam_station_website.wsgi
     expose:
       - 8000
@@ -23,6 +23,8 @@ services:
     build:
       context: ../../
       dockerfile: docker/production/nginx.Dockerfile
+    volumes:
+      - static_volume:/var/www/station.escer.uqam.ca/staticfiles
     networks:
       sitewebrecherche:
         ipv4_address: 172.20.0.7
@@ -30,3 +32,6 @@ services:
 networks:
   sitewebrecherche:
     external: true
+
+volumes:
+  static_volume:
