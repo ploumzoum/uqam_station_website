@@ -2,13 +2,27 @@ version: '3.5'
 
 services:
 
-  uqam-station-prod:
+  web:
     container_name: uqam-station-prod
     volumes:
       - ../../:/var/www/station.escer.uqam.ca
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
+    command: gunicorn -c config/gunicorn/gunicorn.production.conf --env DJANGO_SETTINGS_MODULE=uqam_station_website.settings.production --bind 0.0.0.0:8000 uqam_station_website.wsgi
+    expose:
+      - 8000
+    networks:
+      sitewebrecherche:
+        ipv4_address: 172.20.0.8
+
+
+  nginx:
+    depends_on:
+      - web
+    build:
+      context: ../../
+      dockerfile: docker/production/nginx.Dockerfile
     networks:
       sitewebrecherche:
         ipv4_address: 172.20.0.7
