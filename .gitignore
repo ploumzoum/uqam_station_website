@@ -5,4 +5,5 @@
 **/shared
 **/resources
 **/staticfiles/*
+**/sass_processor_dev
 *.pyc

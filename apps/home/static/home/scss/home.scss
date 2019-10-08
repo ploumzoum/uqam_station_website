@@ -1,16 +1,27 @@
-.display-data {
-  font-weight: bold;
-}
+td:nth-child(2n+1) {
+  width: 12rem; }
+
 #map {
-   width: 100%;
-  height: 500px;
-}
+  width: 100%;
+  height: 500px; }
+
 @media (max-width: 576px) {
   .display-data {
-    padding-top: 1rem;
-  }
+    padding-top: 1rem; }
   #map {
     width: 100%;
-    height: 300px;
-  }
+    height: 300px; } }
+
+.container-forecast {
+  display: flex;
+  flex-direction: column;
+}
+.media {
+  flex: 1 0 auto;
+}
+.media-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }

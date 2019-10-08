@@ -131,11 +131,12 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(ROOT_DIR, "static")
+    os.path.join(ROOT_DIR, "static"),
 ]
 
-STATIC_ROOT = os.path.join(ROOT_DIR, 'staticfiles')
 MEDIA_ROOT = "/var/www/station.escer.uqam.ca/media/"
+STATIC_ROOT = os.path.join(ROOT_DIR, 'staticfiles')
+
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(ROOT_DIR, 'static'),
 ]
