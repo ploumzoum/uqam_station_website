@@ -9,7 +9,7 @@ services:
       dockerfile: docker/deployment/Dockerfile
     volumes:
       - static_volume:/var/www/station.escer.uqam.ca/staticfiles
-    command: gunicorn -c config/gunicorn/gunicorn.production.conf
+    command: gunicorn -c config/gunicorn/gunicorn.deployment.conf
       --env DJANGO_SETTINGS_MODULE=uqam_station_website.settings.production
       --bind 0.0.0.0:8000 uqam_station_website.wsgi
     expose:
