@@ -19,6 +19,8 @@ ENV PYTHONPATH "${PYTHONPATH}:${WORKPATH}"
 RUN pip install --upgrade pip
 RUN pip install -r requirements/production.pip
 
+RUN python manage.py collectstatic --noinput
+
 #Add apps directory to python path
 ENV PYTHONPATH "${PYTHONPATH}:${WORKPATH}/apps"
 
