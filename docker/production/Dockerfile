@@ -24,6 +24,8 @@ RUN pip install --upgrade pip \
 
 #Add apps directory to python path
 ENV PYTHONPATH "${PYTHONPATH}:${WORKPATH}/apps"
+RUN python manage.py migrate -- noinput
+RUN python manage.py collectstatic --noinput
 
 # Create log files
 #RUN mkdir /usr/share/logs
