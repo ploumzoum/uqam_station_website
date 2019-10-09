@@ -92,11 +92,13 @@ function displayStationCurrentData(data) {
 
 }
 function formatDayString(value) {
-    return `${value.substr(0,3)} ${value.substr(3, 1)}
-        ${value.substr(5, 1).toUpperCase()}${value.substr(6)}`;
+    let weekDay = value.substr(0, 3);
+    let day = value.substr(3).split(" ")[0];
+    let month = value.substr(3).split(" ")[1];
+    month = month.charAt(0).toUpperCase() + month.shift();
+    return `${weekDay} ${day} ${month}`;
 }
 function displayForecast(data) {
-    console.log(data);
     let forecast = document.getElementById("forecast");
     data.splice(data.length - 1);
     data.shift();
