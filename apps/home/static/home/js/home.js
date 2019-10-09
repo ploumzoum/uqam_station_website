@@ -95,7 +95,7 @@ function formatDayString(value) {
     let weekDay = value.substr(0, 3);
     let day = value.substr(3).split(" ")[0];
     let month = value.substr(3).split(" ")[1];
-    month = month.charAt(0).toUpperCase() + month.shift();
+    month = month.charAt(0).toUpperCase() + month.slice(1);
     return `${weekDay} ${day} ${month}`;
 }
 function displayForecast(data) {
