@@ -8,7 +8,6 @@ services:
       dockerfile: docker/development/Dockerfile
     volumes:
       - ../../:/var/www/station.escer.uqam.ca
-      - ../../resources:/var/www/station.escer.uqam.ca/media
     command: python manage.py runserver 0.0.0.0:80
     networks:
       sitewebrecherche:
