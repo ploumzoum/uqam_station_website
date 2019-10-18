@@ -3,7 +3,7 @@ version: '3.5'
 services:
 
   web:
-    container_name: uqam-station
+    container_name: station.escer.uqam.ca
     build:
       context: ../../
       dockerfile: docker/deployment/Dockerfile
@@ -19,7 +19,7 @@ services:
         ipv4_address: 172.18.0.8
 
   nginx:
-    container_name: nginx-uqam-station
+    container_name: nginx-station.escer.uqam.ca
     depends_on:
       - web
     build:
